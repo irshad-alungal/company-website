@@ -1,0 +1,105 @@
+/* --------------- header --------------- */
+
+.header-da{
+    min-height: 100vh;
+    padding: 140px 0;
+    position: relative;
+    overflow: hidden !important;
+    z-index: 3;
+
+    .background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        pointer-events: none;
+        background-image: url(../images/header/g-back.png);
+        background-size: cover;
+        z-index: -1;
+
+        &:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -20vw;
+            width: 70vw;
+            bottom: 0;
+            background: #010105;
+            pointer-events: none;
+            border-radius: 50%;
+            filter: blur(200px);
+        }
+    
+        &:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../images/header/Grid.png);
+            background-size: 60%;
+            background-repeat: repeat;
+            z-index: -1;
+            pointer-events: none;
+            opacity: .1;
+        }
+    }
+
+    .shape{
+        position: absolute;
+        top: 15%;
+        left: 25%;
+        width: 50%;
+    }
+
+    .caption{
+
+        .text{
+
+            p{
+                font-size: 20px;
+                font-weight: 300;
+            }
+        }
+
+        h1{
+            font-size: 170px;
+            font-weight: 600;
+            line-height: 1.2;
+            text-transform: uppercase;
+
+            &.play{
+                font-family: "Playfair Display", serif;
+                font-size: 210px;
+                font-style: italic;
+                text-transform: lowercase;
+            }
+        }
+
+        ul{
+
+            li{
+                font-size: 13px;
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                position: relative;
+                padding-left: 20px;
+
+                &:before{
+                    content: '';
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background: #fff;
+                    position: absolute;
+                    top: 40%;
+                    left: 0;
+                }
+            }
+        }
+    }
+}

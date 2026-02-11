@@ -1,0 +1,22 @@
+/* --------------- header --------------- */
+
+.header-mda{
+    min-height: 100vh;
+    padding: 140px 0 180px;
+    position: relative;
+    overflow: hidden !important;
+
+    .caption{
+
+        h1{
+            font-size: 160px;
+            line-height: .85;
+            padding-bottom: 30px;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: url(../images/header/1.jpg);
+            background-size: cover;
+            -webkit-font-smoothing: antialiased;
+        }
+    }
+}

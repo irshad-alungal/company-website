@@ -1,0 +1,225 @@
+@use "theme"as *;
+@use "../function/functions"as *;
+@use "../function/breakpoints"as *;
+@use "form"as *;
+// Authentication Section// 
+#authenticationSection {
+    @include section;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: var(--bgShadeMobile);
+    @include media-lg {
+        background: var(--bgShadeWeb);
+    }
+    #authenticationForm {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+        padding: $s5;
+        background: var(--standard-bg-color);
+        border-radius: var(--btnRadius);
+        @include media-md {
+            padding: $s7;
+        }
+        .formDiv {
+            margin: 0 auto;
+            .logoDiv {
+                width: 100%;
+                padding-bottom: $s4;
+                margin-bottom: $s4;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background: rgb(255, 255, 255);
+                    background: linear-gradient(258deg, rgba(255, 255, 255, 0) 0%, var(--borderGray) 50%, rgba(235, 241, 255, 0) 100%);
+                }
+                img {
+                    width: 10rem;
+                    margin: 0 auto;
+                    @include media-lg {
+                        width: 13rem;
+                    }
+                }
+            }
+            .title {
+                color: var(--darkGray);
+                font-weight: 500;
+                letter-spacing: -.5px;
+                color: var(--black);
+                -webkit-text-fill-color: rgba(0, 0, 0, 0);
+                background-image: linear-gradient(138deg, rgba(0, 0, 0, 0.541), var(--black) 30%, rgba(0, 0, 0, 0.631) 90%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                padding-bottom: 10px;
+                text-align: center;
+                margin: 0 auto;
+                margin-bottom: $s7;
+                span {
+                    background: inherit;
+                }
+            }
+            .inputDiv:has(input:valid) {
+                label {
+                    width: auto;
+                    top: -11px;
+                    left: 10px;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    transform: none;
+                    color: var(--color1);
+                    font-size: $fontMob-1;
+                    border-radius: var(--radius);
+                }
+            }
+            .inputDiv {
+                label {
+                    margin: 0;
+                    position: absolute;
+                    top: 50%;
+                    left: 10px;
+                    width: 90%;
+                    transform: translateY(-50%);
+                    z-index: 1;
+                    color: var(--darkGray);
+                    font-size: $fontSmall;
+                    font-weight: 400;
+                    padding: 5px 8px;
+                    background-color: var(--inputColor1);
+                }
+                input,
+                textarea,
+                select,
+                datalist {
+                    font-size: $font-5;
+                    padding: $baseline;
+                }
+            }
+            .passwordShowIconDiv {
+                position: absolute;
+                top: 50%;
+                right: 15px;
+                transform: translateY(-50%);
+                z-index: 2;
+                width: 35px;
+                height: 35px;
+                padding: 5px;
+                border-radius: $baseline;
+                cursor: pointer;
+                transition: var(--transition1);
+                &:hover {
+                    background-color: var(--inputColor1);
+                    i {
+                        color: var(--inputColor3);
+                    }
+                }
+                .hide {
+                    display: none;
+                }
+                .showIcon {
+                    display: block !important;
+                }
+                i {
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    color: var(--textGray);
+                    font-size: $font-5;
+                    display: none;
+                    cursor: pointer;
+                    transition: var(--transition1);
+                }
+            }
+            .rememberDiv {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                padding-top: $s5;
+                margin: 0;
+                .forgotPass {
+                    color: var(--darkGray);
+                    font-size: $fontMob-1;
+                    font-weight: 500;
+                    cursor: pointer;
+                    transition: var(--transition2);
+                    &:hover {
+                        color: var(--textGray);
+                    }
+                }
+            }
+            .btn {
+                padding: $s3 !important;
+                border-radius: var(--radius) !important;
+                &::before {
+                    margin-left: -100px;
+                }
+            }
+        }
+        #loginForm {
+            #signInSubmit {
+                width: 100%;
+                padding: $font-5 $baseline;
+                img {
+                    display: none;
+                }
+            }
+        }
+        #forgotPasswordForm {
+            #getOTP {
+                width: 100%;
+                padding: $font-5 $baseline;
+                img {
+                    display: none;
+                }
+            }
+            .otpSection {
+                display: none;
+                .otpInput {
+                    .inputBox {
+                        flex-wrap: nowrap;
+                    }
+                    input {
+                        color: var(--darkGray);
+                        font-size: $font-1;
+                        font-weight: 800;
+                        padding: $baseline;
+                    }
+                    .reOtpBtn {
+                        margin: 0;
+                        margin-left: .5rem;
+                        min-width: 110px;
+                        height: 100%;
+                        font-size: $fontMob-1;
+                        font-weight: 600;
+                        padding: $baseline;
+                        border-radius: var(--inputRadius);
+                        border: 1px solid var(--borderGray);
+                        background-color: var(--lightGray);
+                        @include media-sm {
+                            min-width: 130px;
+                            font-size: $baseline;
+                        }
+                        &:hover {
+                            background-color: var(--white);
+                            border: 1px solid var(--color3);
+                        }
+                    }
+                }
+                #resetPasswordBtn {
+                    width: 100%;
+                    padding: $font-5 $baseline;
+                    img {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

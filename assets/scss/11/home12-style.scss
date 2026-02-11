@@ -1,0 +1,235 @@
+@use "../theme/theme"as *;
+
+$bg-color: var(--bg-color);
+$sub-color: var(--sub-color);
+$theme-color: var(--theme-color);
+$body-color: var(--font-color);
+$main-color: var(--main-color);
+$p-color: var(--p-color);
+$border-color: var(--border-color);
+$mobile-xs-screen: 480px;
+$tablet-sm-screen: 768px;
+$desk-md-screen: 992px;
+$desk-lg-screen: 1300px;
+
+
+// menu
+@import 'menu';
+
+// header
+@import 'header';
+
+// Intro
+@import 'intro';
+
+// Services
+@import 'services';
+
+// Works
+@import 'works';
+
+// Clients
+@import 'clients';
+
+// testimonials
+@import 'testimonials';
+
+// blogs
+@import 'blogs';
+
+// contact
+@import 'contact';
+
+// footer
+@import 'footer';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #0D0D0D;
+    background-color: $theme-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 54px;
+}
+
+h3 {
+    font-size: 44px;
+}
+
+h4 {
+    font-size: 36px;
+}
+
+h5 {
+    font-size: 32px;
+}
+
+h6 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+p {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.main-color {
+    color: #1567F5 !important;
+}
+
+.sub-head {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 7px 25px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 30px;
+}
+
+.sub-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.italic {
+    font-style: italic;
+    display: inline;
+}
+
+.loader-wrap svg {
+    fill: #1d1d1d;
+}
+
+.butn {
+
+    &.butn-bord {
+        border: 1px solid rgba(255, 255, 255, .3);
+
+        &:hover {
+            background: #fff;
+            color: #212121;
+        }
+    }
+}
+
+.icon.invert {
+
+    img {
+        filter: invert(1);
+    }
+}
+
+.butn {
+
+    .icon {
+        width: 18px;
+    }
+
+    &:hover {
+
+        .icon.invert {
+
+            img {
+                filter: invert(0);
+            }
+        }
+    }
+}
+
+/* ====================== [ Start Responsive ] ====================== */
+
+@media screen and (max-width: $desk-md-screen) {
+
+    .services-accord2 .accordion .accordion-title h2 {
+        font-size: 60px;
+        margin-bottom: -50px;
+    }
+
+    .footer-mp .footer-logo h1 {
+        font-size: 190px;
+    }
+
+    .footer-mp {
+
+        .ml-none {
+            margin-left: 0 !important;
+        }
+    }
+
+}
+
+@media screen and (max-width: $tablet-sm-screen) {
+
+    .header-mst .caption h1 {
+        font-size: 60px;
+    }
+
+    .hero-mst .exp {
+        display: none;
+    }
+
+    .sec-head {
+        display: block !important;
+
+        .ml-auto {
+            margin: 15px 0 0 0 !important;
+        }
+    }
+
+    .services-accord2 .accordion .accordion-title h2 {
+        font-size: 36px;
+    }
+
+    .work-matrial .swiper-cont {
+        padding: 0;
+    }
+
+    .about-smt .boxs .item h2 {
+        font-size: 70px;
+        margin-bottom: 5px;
+    }
+
+    .footer-mp .footer-logo h1 {
+        font-size: 90px;
+    }
+
+    .footer-mp .footer-logo .union {
+        display: none;
+    }
+}

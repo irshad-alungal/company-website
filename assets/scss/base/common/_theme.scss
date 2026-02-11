@@ -1,0 +1,57 @@
+@use "../function/functions"as *;
+@import "../../theme/theme";
+
+// Font Sizes
+@function font($index) {
+    @return interpolate(480px, 2000px, calc($adjustment-mobile * $baseFontMob * pow($ratio-mobile, $index)), calc($adjustment-pc * $baseFontPC * pow($ratio-pc, $index)));
+}
+
+//Fonts//
+$font-xxl: font(9);
+$font-xl: font(8);
+$font-lg: font(7);
+$font-md: font(6);
+$font-1: font(5);
+$font-2: font(4);
+$font-3: font(3);
+$font-4: font(2);
+$font-5: font(1);
+$fontSmall: 0.937rem;
+$fontMob-1: 0.878rem;
+$fontMob-2: 0.733rem;
+$fontMob-3: 0.667rem;
+$fontMob-4: 0.600rem;
+//Spacing//
+$xxxlSpacing: 26.97rem;
+$xxlSpacing:17.98rem;
+$xlSpacing: 7.99rem;
+$lgSpacing: 5.65rem;
+$mdSpacing: 3.9975rem;
+$smSpacing: 2.83rem;
+$xsSpacing: 2rem;
+// New Spacing
+$s15: 60.69rem;
+$s14: 40.46rem;
+$s13: 26.97rem;
+$s12: 17.98rem;
+$s11: 11.99rem;
+$s10: 7.99rem;
+$s9: 5.65rem;
+$s8: 3.9975rem;
+$s7: 2.83rem;
+$s6: 2rem;
+$s5: 1.413rem;
+$s4: 1rem;
+$s3: 0.7075rem;
+$s2: 0.5rem;
+$s1: 0.35375rem;
+
+@mixin icon {
+    font-family: var(--icon-style) !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}

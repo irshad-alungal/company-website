@@ -1,0 +1,146 @@
+$xs: 360px;
+$sm: 568px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1800px;
+@mixin media-xs {
+    @media (min-width: #{$xs}) {
+        @content;
+    }
+}
+
+@mixin media-sm {
+    @media (min-width: #{$sm}) {
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media (min-width: #{$md}) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media (min-width: #{$lg}) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media (min-width: #{$xl}) {
+        @content;
+    }
+}
+
+@mixin media-xxl {
+    @media (min-width: #{$xxl}) {
+        @content;
+    }
+}
+
+@mixin media-CustomMin($min) {
+    @media (min-width: $min) {
+        @content;
+    }
+}
+
+@mixin media-CustomMax($max) {
+    @media (max-width: $max) {
+        @content;
+    }
+}
+
+@mixin media-Custom($min, $max) {
+    @media (min-width: $min) and (max-width: $max) {
+        @content;
+    }
+}
+
+@mixin media-MaxHeight($max) {
+    @media (max-height: $max) {
+        @content;
+    }
+}
+
+@mixin media-MinHeight($min) {
+    @media (min-height: $min) {
+        @content;
+    }
+}
+
+
+/* Container query mixins */
+
+@mixin container-xs {
+    @container (min-width: #{$xs}) {
+        @content;
+    }
+}
+
+@mixin container-sm {
+    @container (min-width: #{$sm}) {
+        @content;
+    }
+}
+
+@mixin container-md {
+    @container (min-width: #{$md}) {
+        @content;
+    }
+}
+
+@mixin container-lg {
+    @container (min-width: #{$lg}) {
+        @content;
+    }
+}
+
+@mixin container-xl {
+    @container (min-width: #{$xl}) {
+        @content;
+    }
+}
+
+@mixin container-xxl {
+    @container (min-width: #{$xxl}) {
+        @content;
+    }
+}
+
+
+/* Custom container query for specific min and max widths */
+
+@mixin container-min($min) {
+    @container (min-width: $min) {
+        @content;
+    }
+}
+
+@mixin container-max($max) {
+    @container (max-width: $max) {
+        @content;
+    }
+}
+
+@mixin container-min-max($min, $max) {
+    @container (min-width: $min) and (max-width: $max) {
+        @content;
+    }
+}
+
+
+/* Container height queries */
+
+@mixin container-max-height($max) {
+    @container (max-height: $max) {
+        @content;
+    }
+}
+
+@mixin container-min-height($min) {
+    @container (min-height: $min) {
+        @content;
+    }
+}

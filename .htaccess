@@ -1,0 +1,24 @@
+RewriteEngine On
+
+RewriteRule ^it-marketing-onsultation\.html$ https://www.ninetysixsolutions.com/it-marketing-consultation [L,R=301]
+RewriteRule ^it-marketing-onsultation$ https://www.ninetysixsolutions.com/it-marketing-consultation [L,R=301]
+RewriteRule ^blog\.html$ https://www.ninetysixsolutions.com/blogs [L,R=301]
+RewriteRule ^omnichannel-marketing\.html$ https://www.ninetysixsolutions.com/digital-marketing-agency [L,R=301]
+RewriteRule ^static/about$ https://www.ninetysixsolutions.com/about [L,R=301]
+RewriteRule ^static/career$ https://www.ninetysixsolutions.com/career [L,R=301]
+RewriteRule ^static/term-of-use$ https://www.ninetysixsolutions.com/term-of-use [L,R=301]
+RewriteRule ^services/omnichannel-marketing\.html$ https://www.ninetysixsolutions.com/digital-marketing-agency [L,R=301]
+RewriteRule ^static/term-of-use$ https://www.ninetysixsolutions.com/term-of-use [L,R=301]
+RewriteRule ^website-designing-services-dubai$ https://www.ninetysixsolutions.com/services/website-designing-services-dubai [L,R=301]
+RewriteRule ^static/about$ https://www.ninetysixsolutions.com/about [L,R=301]
+RewriteRule ^static/career$ https://www.ninetysixsolutions.com/career [L,R=301]
+RewriteRule ^website-designing-services-dubai\.html$ https://www.ninetysixsolutions.com/services/website-designing-services-dubai [L,R=301]
+RewriteRule ^assets/services/software-development$ https://www.ninetysixsolutions.com/services/software-development [L,R=301]
+RewriteRule ^websiteLandingPageFormSubmit\.php$ https://www.ninetysixsolutions.com/services/website-designing-services-dubai [L,R=301]
+RewriteRule ^contact/websiteLandingPageFormSubmit$ https://www.ninetysixsolutions.com/services/website-designing-services-dubai [L,R=301]
+RewriteRule ^static/privacy-policy$ https://www.ninetysixsolutions.com/privacy-policy [L,R=301]
+RewriteRule ^blog/why-google-is-not-indexing-my-webstie$ https://www.ninetysixsolutions.com/blog/why-google-is-not-indexing-my-website [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html

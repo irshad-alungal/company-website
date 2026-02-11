@@ -1,0 +1,126 @@
+/* --------------- Testimonials --------------- */
+
+.testimonials-mp{
+    position: relative;
+    overflow: hidden !important;
+
+    .brush{
+        position: absolute;
+        bottom: 10%;
+        left: 0;
+        width: 100%;
+    }
+
+    .sec-head{
+
+        .gl-rate{
+            margin: 40px auto 0;
+            width: max-content;
+            border: 1px solid rgba(0,0,0,.2);
+            border-radius: 60px;
+            padding: 10px 20px;
+    
+            .icon{
+                width: 35px;
+            }
+    
+            .cont{
+                padding-left: 30px;
+                text-align: left;
+    
+                h6{
+                    line-height: 1;
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+    
+                .stars{
+                    font-size: 13px;
+                    color: #EF2B10;
+                    margin-left: 10px;
+                }
+    
+                p{
+                    font-size: 12px;
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
+
+    .testim-swiper{
+        position: relative;
+        overflow: visible;
+        padding: 150px 0 250px;
+        background-image: url(../images/testim/global.png);
+        background-size: 60%;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .swiper-slide{
+        margin-right: -50px;
+        width: 400px;
+        height: auto;
+    }
+
+    .item{
+        padding: 40px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        position: relative;
+
+        .info{
+
+            p{
+                font-size: 14px;
+            }
+
+            span{
+                font-size: 16px;
+            }
+
+            .img-author{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+        }
+
+        &:hover{
+            z-index: 5;
+        }
+    }
+
+    .gray{
+        background: #EEEEEE;
+        transform: rotate(-7deg);
+    }
+
+    .colorful{
+        background: $main-color;
+        transform: rotate(2deg) translateY(80px);
+        z-index: 3;
+    }
+
+    .darklen{
+        background: #151515;
+        color: #fff;
+        transform: rotate(2deg) translateY(-50px);
+
+        p{
+            color: #d1d1d1;
+        }
+    }
+
+    .lighten{
+        background: #fff;
+        border: 1px solid rgba(0,0,0,.1);
+        transform: rotate(-7deg);
+        z-index: 3;
+    }
+}

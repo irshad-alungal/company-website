@@ -1,0 +1,52 @@
+/* --------------- footer --------------- */
+
+.footer-sa{
+
+    .call-action{
+
+        h6{
+            color: $main-color;
+            font-size: 20px;
+        }
+
+        h2{
+            font-size: 70px;
+            line-height: 1;
+        }
+
+        .butn-bg{
+            background: #fff;
+            color: #1d1d1d;
+        }
+    }
+
+    .logo{
+        width: 160px;
+    }
+
+    .sub-footer{
+
+        .copy{
+
+            p{
+                font-size: 14px;
+                
+                a{
+                    color: #fff;
+                }
+            }
+        }
+
+        .links{
+            width: 100%;
+
+            a{
+                font-size: 14px;
+            }
+
+            .active{
+                color: #fff;
+            }
+        }
+    }
+}

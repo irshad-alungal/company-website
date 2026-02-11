@@ -1,0 +1,22 @@
+/* Regular */
+
+//@use "rounded/thin"as *;
+//@use "rounded/regular"as *;
+//@use "rounded/bold"as *;
+//@use "rounded/solid"as *;
+
+/* Straight */
+
+@use "straight/thin"as *;
+//@use "straight/regular"as *;
+//@use "straight/bold"as *;
+//@use "straight/solid"as *;
+
+/* Chubby */
+
+//@use "chubby/regular"as *;
+//@use "chubby/thin"as *;
+//@use "chubby/solid"as *;
+:root {
+    --icon-style: "uicons-thin-straight";
+}

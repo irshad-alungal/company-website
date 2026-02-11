@@ -1,0 +1,32 @@
+/* --------------- header --------------- */
+
+.header{
+    padding-top: 180px;
+
+    .caption{
+        width: max-content;
+
+        h1{
+            font-size: 9.4vw;
+            text-transform: uppercase;
+            letter-spacing: -7px;
+
+            b{
+                font-weight: 600;
+            }
+
+            span{
+                font-size: 22px;
+                text-transform: none;
+                letter-spacing: normal;
+                line-height: 1.4;
+                padding-left: 100px;
+            }
+        }
+
+        p{
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+/* --------------- Services --------------- */
+
+.feat {
+    position: relative;
+
+    .feat-card {
+        text-align: center;
+        margin-top: 80px;
+
+        .icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: $main-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 35px;
+        }
+
+        h5{
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        p{
+            color: #888;
+            font-size: 14px;
+        }
+    }
+
+}

@@ -1,0 +1,4253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uicons 2.6.0</title>
+
+    <style>
+        html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+        html {
+            box-sizing: border-box;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #4A6375;
+            line-height: 22px;
+        }
+
+        .container {
+            padding: 50px;
+        }
+
+        .logo {
+            margin-bottom: 50px;
+            display: inline-block;
+        }
+
+        .logo svg {
+            display: block
+        }
+
+        h1 {
+            font-size: 42px;
+            color: #0E2A47;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .mono {
+            font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+        }
+
+        code {
+            background-color: #1D262D;
+            padding: 15px 20px;
+            border-radius: 3px;
+            color: #fff;
+            display: block;
+            font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+            font-weight: normal;
+            width: 100%;
+            max-width: 700px;
+            margin-left: -20px;
+        }
+
+        pre {
+            white-space: break-spaces;
+        }
+
+        small {
+            font-size: 14px;
+            margin-left: -20px;
+        }
+
+        ol {
+            list-style: decimal;
+            padding-left: 20px;
+        }
+
+        .steps {
+            text-align: left;
+            margin-bottom: 40px;;
+        }
+
+        .steps ol li {
+            margin-bottom: 20px;
+        }
+
+        .icons {
+            color: #374957;
+        }
+
+        .icons {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            margin: 0 -20px;
+        }
+
+        .icons li {
+            padding: 0 20px;
+            width: 50%;
+        }
+
+        .icon-holder {
+            height: 62px;
+            line-height: 62px;
+            border-bottom: 1px solid #CFD9E0;
+        }
+
+        .icon-holder i {
+            font-size: $font-size-3xl;
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+
+        .credits a > p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .icons li {
+                padding: 0 20px;
+                width: 100%;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="css/uicons-thin-chubby.css" />
+</head>
+<body>
+
+<div class="container">
+    <a href="https://www.flaticon.com/uicons/interface-icons" class="logo">
+        <svg width="123" height="17" viewBox="0 0 123 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0)">
+                <path d="M29.4438 9.70091C29.4438 14.8009 25.845 17.004 21.812 17.004C17.7791 17.004 14.1641 14.805 14.1641 9.70091V0.434082H18.5135V9.33169C18.5135 11.9162 19.9295 12.9832 21.812 12.9832C23.6946 12.9832 25.1106 11.9324 25.1106 9.33169V0.434082H29.4438V9.70091Z" fill="#222C47"/>
+                <path d="M37.1853 16.5821H32.8359V0.434082H37.1853V16.5821Z" fill="#222C47"/>
+                <path d="M55.3498 3.051L52.2176 5.68012C51.7982 5.17177 51.2715 4.7626 50.6752 4.482C50.0789 4.2014 49.4279 4.05633 48.7689 4.05721C46.5171 4.05721 44.7116 5.82618 44.7116 8.52021C44.7116 11.2142 46.4968 12.9832 48.7689 12.9832C49.4361 12.977 50.0944 12.8291 50.7001 12.5493C51.3058 12.2695 51.8452 11.8642 52.2825 11.3603L55.3823 14.0097C54.6134 14.9885 53.6254 15.7731 52.4979 16.3002C51.3703 16.8274 50.1348 17.0823 48.8906 17.0446C43.7338 16.9999 40.2852 13.3889 40.2852 8.52021C40.2852 3.65148 43.7338 -7.03519e-05 48.8825 -7.03519e-05C50.1248 -0.0375892 51.3582 0.219274 52.4822 0.74954C53.6062 1.2798 54.5888 2.06843 55.3498 3.051Z" fill="#222C47"/>
+                <path d="M73.9959 8.52029C73.9959 13.389 70.2794 17.0406 65.2484 17.0406C60.2174 17.0406 56.5293 13.389 56.5293 8.52029C56.5293 3.65155 60.2295 0 65.2484 0C70.2672 0 73.9959 3.65155 73.9959 8.52029ZM60.9639 8.52029C60.9639 11.1372 62.7978 12.9833 65.2484 12.9833C67.699 12.9833 69.545 11.1494 69.545 8.52029C69.545 5.89117 67.699 4.05728 65.2484 4.05728C62.7978 4.05728 60.9639 5.88305 60.9639 8.52029Z" fill="#222C47"/>
+                <path d="M91.7714 6.30095V16.5821H87.422V7.70883C87.422 5.3759 86.2535 4.08974 84.2736 4.08974C82.4072 4.08974 80.8574 5.30692 80.8574 7.74129V16.5821H76.5039V0.434129H80.7397V2.33294C81.8879 0.616706 83.6569 0 85.4908 0C89.1545 0 91.7714 2.54797 91.7714 6.30095Z" fill="#222C47"/>
+                <path d="M106.657 4.93353C105.049 4.1464 103.297 3.6976 101.508 3.61492C99.8569 3.61492 99.0252 4.19917 99.0252 5.08365C99.0252 5.96814 100.19 6.24809 101.658 6.46718L103.091 6.68222C106.588 7.21778 108.54 8.78389 108.54 11.5185C108.54 14.8495 105.805 16.9999 101.123 16.9999C98.9238 16.9999 96.039 16.5942 93.9414 15.1011L95.6576 11.7984C97.2818 12.8839 99.2024 13.4395 101.155 13.3889C103.184 13.3889 104.141 12.8209 104.141 11.8715C104.141 11.0884 103.33 10.6543 101.456 10.3865L100.141 10.2039C96.4082 9.68866 94.5581 8.05358 94.5581 5.30275C94.5581 1.98795 97.1223 0.0282822 101.374 0.0282822C103.714 -0.0143955 106.03 0.511905 108.122 1.56193L106.657 4.93353Z" fill="#222C47"/>
+                <path d="M3.70114 8.5204L9.24338 2.95787L6.65889 0.377441L1.03145 6.00489C0.37092 6.66732 0 7.56464 0 8.50011C0 9.43559 0.37092 10.3329 1.03145 10.9953L6.60615 16.57L9.19064 13.9896L3.70114 8.5204Z" fill="#4AD295"/>
+                <path d="M118.622 8.44737L113.08 13.9896L115.665 16.57L121.288 10.9548C121.616 10.6269 121.876 10.2377 122.054 9.80916C122.232 9.38066 122.323 8.92136 122.323 8.45751C122.323 7.99366 122.232 7.53436 122.054 7.10586C121.876 6.67737 121.616 6.28808 121.288 5.96026L115.713 0.377441L113.133 2.95787L118.622 8.44737Z" fill="#4AD295"/>
+            </g>
+            <defs>
+                <clipPath id="clip0">
+                    <rect width="122.323" height="17" fill="white"/>
+                </clipPath>
+            </defs>
+        </svg>
+    </a>
+
+    <h1>Get started</h1>
+
+    <div class="steps">
+        <ol>
+            <li>Copy the entire /webfonts folder and the css into your project’s static assets directory.</li>
+            <li>Add the following line into the <span class="mono">&lt;head&gt;</span> of each template or page that you want to use Uicons on.<br><br>
+                <code><pre>&lt;link href="/your-path-to-uicons/css/uicons-thin-chubby.css" rel="stylesheet"&gt;</pre></code>
+            </li>
+            <li>Use the icons with the tags <span class="mono">&lt;i&gt;</span> or <span class="mono">&lt;span&gt;</span>.<br><br>
+                <code><pre>&lt;i class="fi fi-tc-camera"&gt;
+&lt;span class="fi fi-tc-camera"&gt;</pre></code>
+                <small>Example:</small>
+            </li>
+        </ol>
+    </div>
+
+    <ul class="icons">
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-address-book"></i>
+                    <span class="label mono">fi-tc-address-book</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-align-center"></i>
+                    <span class="label mono">fi-tc-align-center</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-ambulance"></i>
+                    <span class="label mono">fi-tc-ambulance</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-american-sign-language-interpreting"></i>
+                    <span class="label mono">fi-tc-american-sign-language-interpreting</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-angle-double-small-down"></i>
+                    <span class="label mono">fi-tc-angle-double-small-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-angle-double-small-left"></i>
+                    <span class="label mono">fi-tc-angle-double-small-left</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-angle-double-small-right"></i>
+                    <span class="label mono">fi-tc-angle-double-small-right</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-angle-double-small-up"></i>
+                    <span class="label mono">fi-tc-angle-double-small-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-angle-small-down"></i>
+                    <span class="label mono">fi-tc-angle-small-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-apple"></i>
+                    <span class="label mono">fi-tc-apple</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-arrows-alt-h"></i>
+                    <span class="label mono">fi-tc-arrows-alt-h</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-arrows-alt-v"></i>
+                    <span class="label mono">fi-tc-arrows-alt-v</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-at"></i>
+                    <span class="label mono">fi-tc-at</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-aubergine"></i>
+                    <span class="label mono">fi-tc-aubergine</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-avocado"></i>
+                    <span class="label mono">fi-tc-avocado</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-baby-carriage"></i>
+                    <span class="label mono">fi-tc-baby-carriage</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-backpack"></i>
+                    <span class="label mono">fi-tc-backpack</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-bacon"></i>
+                    <span class="label mono">fi-tc-bacon</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-ban"></i>
+                    <span class="label mono">fi-tc-ban</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-band-aid"></i>
+                    <span class="label mono">fi-tc-band-aid</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-baseball-alt"></i>
+                    <span class="label mono">fi-tc-baseball-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-baseball"></i>
+                    <span class="label mono">fi-tc-baseball</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-basketball-hoop"></i>
+                    <span class="label mono">fi-tc-basketball-hoop</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-basketball"></i>
+                    <span class="label mono">fi-tc-basketball</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-bed"></i>
+                    <span class="label mono">fi-tc-bed</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-beer"></i>
+                    <span class="label mono">fi-tc-beer</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-bell-ring"></i>
+                    <span class="label mono">fi-tc-bell-ring</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-bell-school"></i>
+                    <span class="label mono">fi-tc-bell-school</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-bell"></i>
+                    <span class="label mono">fi-tc-bell</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-bike"></i>
+                    <span class="label mono">fi-tc-bike</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-biking-mountain"></i>
+                    <span class="label mono">fi-tc-biking-mountain</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-biking"></i>
+                    <span class="label mono">fi-tc-biking</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-blinds"></i>
+                    <span class="label mono">fi-tc-blinds</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-bold"></i>
+                    <span class="label mono">fi-tc-bold</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-bolt"></i>
+                    <span class="label mono">fi-tc-bolt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-book-alt"></i>
+                    <span class="label mono">fi-tc-book-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-book"></i>
+                    <span class="label mono">fi-tc-book</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-bookmark"></i>
+                    <span class="label mono">fi-tc-bookmark</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-bottle"></i>
+                    <span class="label mono">fi-tc-bottle</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-bow-arrow"></i>
+                    <span class="label mono">fi-tc-bow-arrow</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-bowling-ball"></i>
+                    <span class="label mono">fi-tc-bowling-ball</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-bowling-pins"></i>
+                    <span class="label mono">fi-tc-bowling-pins</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-box-alt"></i>
+                    <span class="label mono">fi-tc-box-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-boxing-glove"></i>
+                    <span class="label mono">fi-tc-boxing-glove</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-braille"></i>
+                    <span class="label mono">fi-tc-braille</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-bread-slice"></i>
+                    <span class="label mono">fi-tc-bread-slice</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-bread"></i>
+                    <span class="label mono">fi-tc-bread</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-briefcase"></i>
+                    <span class="label mono">fi-tc-briefcase</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-broccoli"></i>
+                    <span class="label mono">fi-tc-broccoli</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-broom"></i>
+                    <span class="label mono">fi-tc-broom</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-brush"></i>
+                    <span class="label mono">fi-tc-brush</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-building"></i>
+                    <span class="label mono">fi-tc-building</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-bulb"></i>
+                    <span class="label mono">fi-tc-bulb</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-burrito"></i>
+                    <span class="label mono">fi-tc-burrito</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-bus-alt"></i>
+                    <span class="label mono">fi-tc-bus-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-bus"></i>
+                    <span class="label mono">fi-tc-bus</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cake-birthday"></i>
+                    <span class="label mono">fi-tc-cake-birthday</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-calendar"></i>
+                    <span class="label mono">fi-tc-calendar</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-camera"></i>
+                    <span class="label mono">fi-tc-camera</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-camping"></i>
+                    <span class="label mono">fi-tc-camping</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-candy-alt"></i>
+                    <span class="label mono">fi-tc-candy-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-candy"></i>
+                    <span class="label mono">fi-tc-candy</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-car-alt"></i>
+                    <span class="label mono">fi-tc-car-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-car-battery"></i>
+                    <span class="label mono">fi-tc-car-battery</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-car-building"></i>
+                    <span class="label mono">fi-tc-car-building</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-car-bump"></i>
+                    <span class="label mono">fi-tc-car-bump</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-car-bus"></i>
+                    <span class="label mono">fi-tc-car-bus</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-car-crash"></i>
+                    <span class="label mono">fi-tc-car-crash</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-car-garage"></i>
+                    <span class="label mono">fi-tc-car-garage</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-car-mechanic"></i>
+                    <span class="label mono">fi-tc-car-mechanic</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-car-side"></i>
+                    <span class="label mono">fi-tc-car-side</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-car-tilt"></i>
+                    <span class="label mono">fi-tc-car-tilt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-car-wash"></i>
+                    <span class="label mono">fi-tc-car-wash</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-car"></i>
+                    <span class="label mono">fi-tc-car</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-caravan-alt"></i>
+                    <span class="label mono">fi-tc-caravan-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-caravan"></i>
+                    <span class="label mono">fi-tc-caravan</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-carrot"></i>
+                    <span class="label mono">fi-tc-carrot</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cars"></i>
+                    <span class="label mono">fi-tc-cars</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-charging-station"></i>
+                    <span class="label mono">fi-tc-charging-station</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cheese"></i>
+                    <span class="label mono">fi-tc-cheese</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cherry"></i>
+                    <span class="label mono">fi-tc-cherry</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-chess-bishop"></i>
+                    <span class="label mono">fi-tc-chess-bishop</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-chess-board"></i>
+                    <span class="label mono">fi-tc-chess-board</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-chess-clock-alt"></i>
+                    <span class="label mono">fi-tc-chess-clock-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-chess-clock"></i>
+                    <span class="label mono">fi-tc-chess-clock</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-chess-king-alt"></i>
+                    <span class="label mono">fi-tc-chess-king-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-chess-king"></i>
+                    <span class="label mono">fi-tc-chess-king</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-chess-knight-alt"></i>
+                    <span class="label mono">fi-tc-chess-knight-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-chess-knight"></i>
+                    <span class="label mono">fi-tc-chess-knight</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-chess-pawn-alt"></i>
+                    <span class="label mono">fi-tc-chess-pawn-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-chess-pawn"></i>
+                    <span class="label mono">fi-tc-chess-pawn</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-chess-piece"></i>
+                    <span class="label mono">fi-tc-chess-piece</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-chess-queen-alt"></i>
+                    <span class="label mono">fi-tc-chess-queen-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-chess-queen"></i>
+                    <span class="label mono">fi-tc-chess-queen</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-chess-rook-alt"></i>
+                    <span class="label mono">fi-tc-chess-rook-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-chess-rook"></i>
+                    <span class="label mono">fi-tc-chess-rook</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-chess"></i>
+                    <span class="label mono">fi-tc-chess</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-chocolate"></i>
+                    <span class="label mono">fi-tc-chocolate</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-clip"></i>
+                    <span class="label mono">fi-tc-clip</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-clock"></i>
+                    <span class="label mono">fi-tc-clock</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cloud-download-alt"></i>
+                    <span class="label mono">fi-tc-cloud-download-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cloud-drizzle"></i>
+                    <span class="label mono">fi-tc-cloud-drizzle</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cloud-hail-mixed"></i>
+                    <span class="label mono">fi-tc-cloud-hail-mixed</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cloud-hail"></i>
+                    <span class="label mono">fi-tc-cloud-hail</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cloud-moon-rain"></i>
+                    <span class="label mono">fi-tc-cloud-moon-rain</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cloud-moon"></i>
+                    <span class="label mono">fi-tc-cloud-moon</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cloud-rain"></i>
+                    <span class="label mono">fi-tc-cloud-rain</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cloud-rainbow"></i>
+                    <span class="label mono">fi-tc-cloud-rainbow</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cloud-showers-heavy"></i>
+                    <span class="label mono">fi-tc-cloud-showers-heavy</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cloud-showers"></i>
+                    <span class="label mono">fi-tc-cloud-showers</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cloud-sleet"></i>
+                    <span class="label mono">fi-tc-cloud-sleet</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cloud-snow"></i>
+                    <span class="label mono">fi-tc-cloud-snow</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cloud-sun-rain"></i>
+                    <span class="label mono">fi-tc-cloud-sun-rain</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cloud-sun"></i>
+                    <span class="label mono">fi-tc-cloud-sun</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cloud-upload-alt"></i>
+                    <span class="label mono">fi-tc-cloud-upload-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cloud"></i>
+                    <span class="label mono">fi-tc-cloud</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-clouds-moon"></i>
+                    <span class="label mono">fi-tc-clouds-moon</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-clouds-sun"></i>
+                    <span class="label mono">fi-tc-clouds-sun</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-clouds"></i>
+                    <span class="label mono">fi-tc-clouds</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-club"></i>
+                    <span class="label mono">fi-tc-club</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cocktail-alt"></i>
+                    <span class="label mono">fi-tc-cocktail-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cocktail"></i>
+                    <span class="label mono">fi-tc-cocktail</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-coffee-pot"></i>
+                    <span class="label mono">fi-tc-coffee-pot</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-coffee"></i>
+                    <span class="label mono">fi-tc-coffee</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-comment-alt"></i>
+                    <span class="label mono">fi-tc-comment-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-comment-check"></i>
+                    <span class="label mono">fi-tc-comment-check</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-comment"></i>
+                    <span class="label mono">fi-tc-comment</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-comments"></i>
+                    <span class="label mono">fi-tc-comments</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-compress-alt"></i>
+                    <span class="label mono">fi-tc-compress-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-compress"></i>
+                    <span class="label mono">fi-tc-compress</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cookie"></i>
+                    <span class="label mono">fi-tc-cookie</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-copy-alt"></i>
+                    <span class="label mono">fi-tc-copy-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-corn"></i>
+                    <span class="label mono">fi-tc-corn</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cow"></i>
+                    <span class="label mono">fi-tc-cow</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-credit-card"></i>
+                    <span class="label mono">fi-tc-credit-card</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cricket"></i>
+                    <span class="label mono">fi-tc-cricket</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-croissant"></i>
+                    <span class="label mono">fi-tc-croissant</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cross"></i>
+                    <span class="label mono">fi-tc-cross</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-crown"></i>
+                    <span class="label mono">fi-tc-crown</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cube"></i>
+                    <span class="label mono">fi-tc-cube</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-curling"></i>
+                    <span class="label mono">fi-tc-curling</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-cursor-text"></i>
+                    <span class="label mono">fi-tc-cursor-text</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-dashboard"></i>
+                    <span class="label mono">fi-tc-dashboard</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-dewpoint"></i>
+                    <span class="label mono">fi-tc-dewpoint</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-diamond"></i>
+                    <span class="label mono">fi-tc-diamond</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-dice-alt"></i>
+                    <span class="label mono">fi-tc-dice-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-dice-d10"></i>
+                    <span class="label mono">fi-tc-dice-d10</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-dice-d12"></i>
+                    <span class="label mono">fi-tc-dice-d12</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-dice-d20"></i>
+                    <span class="label mono">fi-tc-dice-d20</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-dice-d4"></i>
+                    <span class="label mono">fi-tc-dice-d4</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-dice-d6"></i>
+                    <span class="label mono">fi-tc-dice-d6</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-dice-d8"></i>
+                    <span class="label mono">fi-tc-dice-d8</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-dice-four"></i>
+                    <span class="label mono">fi-tc-dice-four</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-dice-one"></i>
+                    <span class="label mono">fi-tc-dice-one</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-dice-six"></i>
+                    <span class="label mono">fi-tc-dice-six</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-dice-three"></i>
+                    <span class="label mono">fi-tc-dice-three</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-dice-two"></i>
+                    <span class="label mono">fi-tc-dice-two</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-dice"></i>
+                    <span class="label mono">fi-tc-dice</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-diploma"></i>
+                    <span class="label mono">fi-tc-diploma</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-disk"></i>
+                    <span class="label mono">fi-tc-disk</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-doctor"></i>
+                    <span class="label mono">fi-tc-doctor</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-document-signed"></i>
+                    <span class="label mono">fi-tc-document-signed</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-dollar"></i>
+                    <span class="label mono">fi-tc-dollar</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-down-left-and-up-right-to-center"></i>
+                    <span class="label mono">fi-tc-down-left-and-up-right-to-center</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-dreidel"></i>
+                    <span class="label mono">fi-tc-dreidel</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-eclipse-alt"></i>
+                    <span class="label mono">fi-tc-eclipse-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-eclipse"></i>
+                    <span class="label mono">fi-tc-eclipse</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-edit"></i>
+                    <span class="label mono">fi-tc-edit</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-egg-fried"></i>
+                    <span class="label mono">fi-tc-egg-fried</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-egg"></i>
+                    <span class="label mono">fi-tc-egg</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-engine-warning"></i>
+                    <span class="label mono">fi-tc-engine-warning</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-envelope-open"></i>
+                    <span class="label mono">fi-tc-envelope-open</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-envelope"></i>
+                    <span class="label mono">fi-tc-envelope</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-euro"></i>
+                    <span class="label mono">fi-tc-euro</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-exclamation"></i>
+                    <span class="label mono">fi-tc-exclamation</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-exit"></i>
+                    <span class="label mono">fi-tc-exit</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-expand"></i>
+                    <span class="label mono">fi-tc-expand</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-eye-dropper"></i>
+                    <span class="label mono">fi-tc-eye-dropper</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-feather"></i>
+                    <span class="label mono">fi-tc-feather</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-field-hockey"></i>
+                    <span class="label mono">fi-tc-field-hockey</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-fighter-jet"></i>
+                    <span class="label mono">fi-tc-fighter-jet</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-fill"></i>
+                    <span class="label mono">fi-tc-fill</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-film"></i>
+                    <span class="label mono">fi-tc-film</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-fingerprint"></i>
+                    <span class="label mono">fi-tc-fingerprint</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-fish"></i>
+                    <span class="label mono">fi-tc-fish</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-flame"></i>
+                    <span class="label mono">fi-tc-flame</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-flower-tulip"></i>
+                    <span class="label mono">fi-tc-flower-tulip</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-flower"></i>
+                    <span class="label mono">fi-tc-flower</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-fog"></i>
+                    <span class="label mono">fi-tc-fog</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-football"></i>
+                    <span class="label mono">fi-tc-football</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-fork"></i>
+                    <span class="label mono">fi-tc-fork</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-forward"></i>
+                    <span class="label mono">fi-tc-forward</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-french-fries"></i>
+                    <span class="label mono">fi-tc-french-fries</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-game-board-alt"></i>
+                    <span class="label mono">fi-tc-game-board-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-gamepad"></i>
+                    <span class="label mono">fi-tc-gamepad</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-garage-car"></i>
+                    <span class="label mono">fi-tc-garage-car</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-garage-open"></i>
+                    <span class="label mono">fi-tc-garage-open</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-garage"></i>
+                    <span class="label mono">fi-tc-garage</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-garlic"></i>
+                    <span class="label mono">fi-tc-garlic</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-gas-pump-alt"></i>
+                    <span class="label mono">fi-tc-gas-pump-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-gas-pump-slash"></i>
+                    <span class="label mono">fi-tc-gas-pump-slash</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-gas-pump"></i>
+                    <span class="label mono">fi-tc-gas-pump</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-gift"></i>
+                    <span class="label mono">fi-tc-gift</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-gingerbread-man"></i>
+                    <span class="label mono">fi-tc-gingerbread-man</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-glass-cheers"></i>
+                    <span class="label mono">fi-tc-glass-cheers</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-glass"></i>
+                    <span class="label mono">fi-tc-glass</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-glasses"></i>
+                    <span class="label mono">fi-tc-glasses</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-globe-alt"></i>
+                    <span class="label mono">fi-tc-globe-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-globe"></i>
+                    <span class="label mono">fi-tc-globe</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-golf-ball"></i>
+                    <span class="label mono">fi-tc-golf-ball</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-golf-club"></i>
+                    <span class="label mono">fi-tc-golf-club</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-graduation-cap"></i>
+                    <span class="label mono">fi-tc-graduation-cap</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-grape"></i>
+                    <span class="label mono">fi-tc-grape</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-grill"></i>
+                    <span class="label mono">fi-tc-grill</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-guitar"></i>
+                    <span class="label mono">fi-tc-guitar</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-gym"></i>
+                    <span class="label mono">fi-tc-gym</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-hamburger-soda"></i>
+                    <span class="label mono">fi-tc-hamburger-soda</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-hamburger"></i>
+                    <span class="label mono">fi-tc-hamburger</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-hashtag"></i>
+                    <span class="label mono">fi-tc-hashtag</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-hat-chef"></i>
+                    <span class="label mono">fi-tc-hat-chef</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-headphones"></i>
+                    <span class="label mono">fi-tc-headphones</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-headset"></i>
+                    <span class="label mono">fi-tc-headset</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-heart"></i>
+                    <span class="label mono">fi-tc-heart</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-heat"></i>
+                    <span class="label mono">fi-tc-heat</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-helicopter-side"></i>
+                    <span class="label mono">fi-tc-helicopter-side</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-hiking"></i>
+                    <span class="label mono">fi-tc-hiking</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-hockey-mask"></i>
+                    <span class="label mono">fi-tc-hockey-mask</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-hockey-puck"></i>
+                    <span class="label mono">fi-tc-hockey-puck</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-hockey-sticks"></i>
+                    <span class="label mono">fi-tc-hockey-sticks</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-home"></i>
+                    <span class="label mono">fi-tc-home</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-hotdog"></i>
+                    <span class="label mono">fi-tc-hotdog</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-hourglass-end"></i>
+                    <span class="label mono">fi-tc-hourglass-end</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-hourglass"></i>
+                    <span class="label mono">fi-tc-hourglass</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-house-flood"></i>
+                    <span class="label mono">fi-tc-house-flood</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-humidity"></i>
+                    <span class="label mono">fi-tc-humidity</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-hurricane"></i>
+                    <span class="label mono">fi-tc-hurricane</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-ice-cream"></i>
+                    <span class="label mono">fi-tc-ice-cream</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-ice-skate"></i>
+                    <span class="label mono">fi-tc-ice-skate</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-inbox-in"></i>
+                    <span class="label mono">fi-tc-inbox-in</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-inbox-out"></i>
+                    <span class="label mono">fi-tc-inbox-out</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-inbox"></i>
+                    <span class="label mono">fi-tc-inbox</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-infinity"></i>
+                    <span class="label mono">fi-tc-infinity</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-italic"></i>
+                    <span class="label mono">fi-tc-italic</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-jam"></i>
+                    <span class="label mono">fi-tc-jam</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-key"></i>
+                    <span class="label mono">fi-tc-key</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-kite"></i>
+                    <span class="label mono">fi-tc-kite</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-knife"></i>
+                    <span class="label mono">fi-tc-knife</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-laptop"></i>
+                    <span class="label mono">fi-tc-laptop</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-lasso"></i>
+                    <span class="label mono">fi-tc-lasso</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-layers"></i>
+                    <span class="label mono">fi-tc-layers</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-lemon"></i>
+                    <span class="label mono">fi-tc-lemon</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-letter-case"></i>
+                    <span class="label mono">fi-tc-letter-case</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-lettuce"></i>
+                    <span class="label mono">fi-tc-lettuce</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-life-ring"></i>
+                    <span class="label mono">fi-tc-life-ring</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-link"></i>
+                    <span class="label mono">fi-tc-link</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-list"></i>
+                    <span class="label mono">fi-tc-list</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-luchador"></i>
+                    <span class="label mono">fi-tc-luchador</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-magic-wand"></i>
+                    <span class="label mono">fi-tc-magic-wand</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-map-marker-cross"></i>
+                    <span class="label mono">fi-tc-map-marker-cross</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-map-marker-minus"></i>
+                    <span class="label mono">fi-tc-map-marker-minus</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-map-marker-plus"></i>
+                    <span class="label mono">fi-tc-map-marker-plus</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-map-marker"></i>
+                    <span class="label mono">fi-tc-map-marker</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-map"></i>
+                    <span class="label mono">fi-tc-map</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-marker"></i>
+                    <span class="label mono">fi-tc-marker</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-mask-carnival"></i>
+                    <span class="label mono">fi-tc-mask-carnival</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-megaphone"></i>
+                    <span class="label mono">fi-tc-megaphone</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-melon"></i>
+                    <span class="label mono">fi-tc-melon</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-meteor"></i>
+                    <span class="label mono">fi-tc-meteor</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-microphone-alt"></i>
+                    <span class="label mono">fi-tc-microphone-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-microphone"></i>
+                    <span class="label mono">fi-tc-microphone</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-money"></i>
+                    <span class="label mono">fi-tc-money</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-moon-stars"></i>
+                    <span class="label mono">fi-tc-moon-stars</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-moon"></i>
+                    <span class="label mono">fi-tc-moon</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-motorcycle"></i>
+                    <span class="label mono">fi-tc-motorcycle</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-mountains"></i>
+                    <span class="label mono">fi-tc-mountains</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-mouse"></i>
+                    <span class="label mono">fi-tc-mouse</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-mug-alt"></i>
+                    <span class="label mono">fi-tc-mug-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-mug-hot-alt"></i>
+                    <span class="label mono">fi-tc-mug-hot-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-mug-hot"></i>
+                    <span class="label mono">fi-tc-mug-hot</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-mug-tea"></i>
+                    <span class="label mono">fi-tc-mug-tea</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-mug"></i>
+                    <span class="label mono">fi-tc-mug</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-mushroom"></i>
+                    <span class="label mono">fi-tc-mushroom</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-music-alt"></i>
+                    <span class="label mono">fi-tc-music-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-music"></i>
+                    <span class="label mono">fi-tc-music</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-navigation"></i>
+                    <span class="label mono">fi-tc-navigation</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-network"></i>
+                    <span class="label mono">fi-tc-network</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-noodles"></i>
+                    <span class="label mono">fi-tc-noodles</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-oil-can"></i>
+                    <span class="label mono">fi-tc-oil-can</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-oil-temp"></i>
+                    <span class="label mono">fi-tc-oil-temp</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-olive-oil"></i>
+                    <span class="label mono">fi-tc-olive-oil</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-olives"></i>
+                    <span class="label mono">fi-tc-olives</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-onion"></i>
+                    <span class="label mono">fi-tc-onion</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-opacity"></i>
+                    <span class="label mono">fi-tc-opacity</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-palette"></i>
+                    <span class="label mono">fi-tc-palette</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-pan"></i>
+                    <span class="label mono">fi-tc-pan</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-pause"></i>
+                    <span class="label mono">fi-tc-pause</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-paw"></i>
+                    <span class="label mono">fi-tc-paw</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-peach"></i>
+                    <span class="label mono">fi-tc-peach</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-pencil"></i>
+                    <span class="label mono">fi-tc-pencil</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-pennant"></i>
+                    <span class="label mono">fi-tc-pennant</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-pepper-hot"></i>
+                    <span class="label mono">fi-tc-pepper-hot</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-pepper"></i>
+                    <span class="label mono">fi-tc-pepper</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-phone-call"></i>
+                    <span class="label mono">fi-tc-phone-call</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-phone-slash"></i>
+                    <span class="label mono">fi-tc-phone-slash</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-physics"></i>
+                    <span class="label mono">fi-tc-physics</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-picnic"></i>
+                    <span class="label mono">fi-tc-picnic</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-picture"></i>
+                    <span class="label mono">fi-tc-picture</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-pie"></i>
+                    <span class="label mono">fi-tc-pie</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-pineapple"></i>
+                    <span class="label mono">fi-tc-pineapple</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-ping-pong"></i>
+                    <span class="label mono">fi-tc-ping-pong</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-pizza-slice"></i>
+                    <span class="label mono">fi-tc-pizza-slice</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-plane-alt"></i>
+                    <span class="label mono">fi-tc-plane-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-plane"></i>
+                    <span class="label mono">fi-tc-plane</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-plate"></i>
+                    <span class="label mono">fi-tc-plate</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-play"></i>
+                    <span class="label mono">fi-tc-play</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-plus"></i>
+                    <span class="label mono">fi-tc-plus</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-popcorn"></i>
+                    <span class="label mono">fi-tc-popcorn</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-portrait"></i>
+                    <span class="label mono">fi-tc-portrait</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-pot"></i>
+                    <span class="label mono">fi-tc-pot</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-pound"></i>
+                    <span class="label mono">fi-tc-pound</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-power"></i>
+                    <span class="label mono">fi-tc-power</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-presentation"></i>
+                    <span class="label mono">fi-tc-presentation</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-print"></i>
+                    <span class="label mono">fi-tc-print</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-pumpkin"></i>
+                    <span class="label mono">fi-tc-pumpkin</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-puzzle-piece"></i>
+                    <span class="label mono">fi-tc-puzzle-piece</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-quote-right"></i>
+                    <span class="label mono">fi-tc-quote-right</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-racquet"></i>
+                    <span class="label mono">fi-tc-racquet</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-radish"></i>
+                    <span class="label mono">fi-tc-radish</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-rainbow"></i>
+                    <span class="label mono">fi-tc-rainbow</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-raindrops"></i>
+                    <span class="label mono">fi-tc-raindrops</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-rec"></i>
+                    <span class="label mono">fi-tc-rec</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-receipt"></i>
+                    <span class="label mono">fi-tc-receipt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-record-vinyl"></i>
+                    <span class="label mono">fi-tc-record-vinyl</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-rectangle-horizontal"></i>
+                    <span class="label mono">fi-tc-rectangle-horizontal</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-rectangle-panoramic"></i>
+                    <span class="label mono">fi-tc-rectangle-panoramic</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-rectangle-vertical"></i>
+                    <span class="label mono">fi-tc-rectangle-vertical</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-reply-all"></i>
+                    <span class="label mono">fi-tc-reply-all</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-restaurant"></i>
+                    <span class="label mono">fi-tc-restaurant</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-rewind"></i>
+                    <span class="label mono">fi-tc-rewind</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-rhombus"></i>
+                    <span class="label mono">fi-tc-rhombus</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-rings-wedding"></i>
+                    <span class="label mono">fi-tc-rings-wedding</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-road"></i>
+                    <span class="label mono">fi-tc-road</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-rocket-lunch"></i>
+                    <span class="label mono">fi-tc-rocket-lunch</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-rocket"></i>
+                    <span class="label mono">fi-tc-rocket</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-rotate-left"></i>
+                    <span class="label mono">fi-tc-rotate-left</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-rotate-reverse"></i>
+                    <span class="label mono">fi-tc-rotate-reverse</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-rugby-helmet"></i>
+                    <span class="label mono">fi-tc-rugby-helmet</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-rugby"></i>
+                    <span class="label mono">fi-tc-rugby</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-running"></i>
+                    <span class="label mono">fi-tc-running</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-rv"></i>
+                    <span class="label mono">fi-tc-rv</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-salad"></i>
+                    <span class="label mono">fi-tc-salad</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-salt-pepper"></i>
+                    <span class="label mono">fi-tc-salt-pepper</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sandwich"></i>
+                    <span class="label mono">fi-tc-sandwich</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sauce"></i>
+                    <span class="label mono">fi-tc-sauce</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sausage"></i>
+                    <span class="label mono">fi-tc-sausage</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-scale"></i>
+                    <span class="label mono">fi-tc-scale</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-school-bus"></i>
+                    <span class="label mono">fi-tc-school-bus</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-school"></i>
+                    <span class="label mono">fi-tc-school</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-scissors"></i>
+                    <span class="label mono">fi-tc-scissors</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-screen"></i>
+                    <span class="label mono">fi-tc-screen</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-settings-sliders"></i>
+                    <span class="label mono">fi-tc-settings-sliders</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-settings"></i>
+                    <span class="label mono">fi-tc-settings</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-shield-check"></i>
+                    <span class="label mono">fi-tc-shield-check</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-shield"></i>
+                    <span class="label mono">fi-tc-shield</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-ship"></i>
+                    <span class="label mono">fi-tc-ship</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-shopping-bag"></i>
+                    <span class="label mono">fi-tc-shopping-bag</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-shopping-cart"></i>
+                    <span class="label mono">fi-tc-shopping-cart</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-shrimp"></i>
+                    <span class="label mono">fi-tc-shrimp</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-shuttle-van"></i>
+                    <span class="label mono">fi-tc-shuttle-van</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-shuttlecock"></i>
+                    <span class="label mono">fi-tc-shuttlecock</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sign-in-alt"></i>
+                    <span class="label mono">fi-tc-sign-in-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sign-out-alt"></i>
+                    <span class="label mono">fi-tc-sign-out-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-skating"></i>
+                    <span class="label mono">fi-tc-skating</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-skewer"></i>
+                    <span class="label mono">fi-tc-skewer</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-ski-jump"></i>
+                    <span class="label mono">fi-tc-ski-jump</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-ski-lift"></i>
+                    <span class="label mono">fi-tc-ski-lift</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-skiing-nordic"></i>
+                    <span class="label mono">fi-tc-skiing-nordic</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-skiing"></i>
+                    <span class="label mono">fi-tc-skiing</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sledding"></i>
+                    <span class="label mono">fi-tc-sledding</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sleigh"></i>
+                    <span class="label mono">fi-tc-sleigh</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-smartphone"></i>
+                    <span class="label mono">fi-tc-smartphone</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-smog"></i>
+                    <span class="label mono">fi-tc-smog</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-smoke"></i>
+                    <span class="label mono">fi-tc-smoke</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-snow-blowing"></i>
+                    <span class="label mono">fi-tc-snow-blowing</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-snowboarding"></i>
+                    <span class="label mono">fi-tc-snowboarding</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-snowflake"></i>
+                    <span class="label mono">fi-tc-snowflake</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-snowflakes"></i>
+                    <span class="label mono">fi-tc-snowflakes</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-snowmobile"></i>
+                    <span class="label mono">fi-tc-snowmobile</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-snowplow"></i>
+                    <span class="label mono">fi-tc-snowplow</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-soap"></i>
+                    <span class="label mono">fi-tc-soap</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sort-alpha-down-alt"></i>
+                    <span class="label mono">fi-tc-sort-alpha-down-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sort-alpha-down"></i>
+                    <span class="label mono">fi-tc-sort-alpha-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sort-alpha-up-alt"></i>
+                    <span class="label mono">fi-tc-sort-alpha-up-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sort-alpha-up"></i>
+                    <span class="label mono">fi-tc-sort-alpha-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sort-alt"></i>
+                    <span class="label mono">fi-tc-sort-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sort-amount-down-alt"></i>
+                    <span class="label mono">fi-tc-sort-amount-down-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sort-amount-down"></i>
+                    <span class="label mono">fi-tc-sort-amount-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sort-amount-up-alt"></i>
+                    <span class="label mono">fi-tc-sort-amount-up-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sort-amount-up"></i>
+                    <span class="label mono">fi-tc-sort-amount-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sort"></i>
+                    <span class="label mono">fi-tc-sort</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-soup"></i>
+                    <span class="label mono">fi-tc-soup</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-spa"></i>
+                    <span class="label mono">fi-tc-spa</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-space-shuttle"></i>
+                    <span class="label mono">fi-tc-space-shuttle</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-spade"></i>
+                    <span class="label mono">fi-tc-spade</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sparkles"></i>
+                    <span class="label mono">fi-tc-sparkles</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-speaker"></i>
+                    <span class="label mono">fi-tc-speaker</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-spoon"></i>
+                    <span class="label mono">fi-tc-spoon</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-square-root"></i>
+                    <span class="label mono">fi-tc-square-root</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-square"></i>
+                    <span class="label mono">fi-tc-square</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-star"></i>
+                    <span class="label mono">fi-tc-star</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-starfighter"></i>
+                    <span class="label mono">fi-tc-starfighter</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-stars"></i>
+                    <span class="label mono">fi-tc-stars</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-steak"></i>
+                    <span class="label mono">fi-tc-steak</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-steering-wheel"></i>
+                    <span class="label mono">fi-tc-steering-wheel</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-stethoscope"></i>
+                    <span class="label mono">fi-tc-stethoscope</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-stop"></i>
+                    <span class="label mono">fi-tc-stop</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-stopwatch"></i>
+                    <span class="label mono">fi-tc-stopwatch</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-strawberry"></i>
+                    <span class="label mono">fi-tc-strawberry</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-subway"></i>
+                    <span class="label mono">fi-tc-subway</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sun"></i>
+                    <span class="label mono">fi-tc-sun</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sunrise-alt"></i>
+                    <span class="label mono">fi-tc-sunrise-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sunrise"></i>
+                    <span class="label mono">fi-tc-sunrise</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sunset"></i>
+                    <span class="label mono">fi-tc-sunset</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sushi"></i>
+                    <span class="label mono">fi-tc-sushi</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-swimmer"></i>
+                    <span class="label mono">fi-tc-swimmer</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-sword"></i>
+                    <span class="label mono">fi-tc-sword</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-syringe"></i>
+                    <span class="label mono">fi-tc-syringe</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tablet"></i>
+                    <span class="label mono">fi-tc-tablet</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tachometer-alt-average"></i>
+                    <span class="label mono">fi-tc-tachometer-alt-average</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tachometer-alt-fastest"></i>
+                    <span class="label mono">fi-tc-tachometer-alt-fastest</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tachometer-alt-slow"></i>
+                    <span class="label mono">fi-tc-tachometer-alt-slow</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tachometer-alt-slowest"></i>
+                    <span class="label mono">fi-tc-tachometer-alt-slowest</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tachometer-average"></i>
+                    <span class="label mono">fi-tc-tachometer-average</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tachometer-fast"></i>
+                    <span class="label mono">fi-tc-tachometer-fast</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tachometer-fastest"></i>
+                    <span class="label mono">fi-tc-tachometer-fastest</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tachometer-slow"></i>
+                    <span class="label mono">fi-tc-tachometer-slow</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tachometer-slowest"></i>
+                    <span class="label mono">fi-tc-tachometer-slowest</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tachometer"></i>
+                    <span class="label mono">fi-tc-tachometer</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-taco"></i>
+                    <span class="label mono">fi-tc-taco</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-target"></i>
+                    <span class="label mono">fi-tc-target</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-taxi"></i>
+                    <span class="label mono">fi-tc-taxi</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-temperature-down"></i>
+                    <span class="label mono">fi-tc-temperature-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-temperature-frigid"></i>
+                    <span class="label mono">fi-tc-temperature-frigid</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-temperature-high"></i>
+                    <span class="label mono">fi-tc-temperature-high</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-temperature-list"></i>
+                    <span class="label mono">fi-tc-temperature-list</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-temperature-low"></i>
+                    <span class="label mono">fi-tc-temperature-low</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-temperature-up"></i>
+                    <span class="label mono">fi-tc-temperature-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tennis"></i>
+                    <span class="label mono">fi-tc-tennis</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-test-tube"></i>
+                    <span class="label mono">fi-tc-test-tube</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-text-check"></i>
+                    <span class="label mono">fi-tc-text-check</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-text"></i>
+                    <span class="label mono">fi-tc-text</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-thermometer-half"></i>
+                    <span class="label mono">fi-tc-thermometer-half</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-thumbtack"></i>
+                    <span class="label mono">fi-tc-thumbtack</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-thunderstorm-moon"></i>
+                    <span class="label mono">fi-tc-thunderstorm-moon</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-thunderstorm-risk"></i>
+                    <span class="label mono">fi-tc-thunderstorm-risk</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-thunderstorm-sun"></i>
+                    <span class="label mono">fi-tc-thunderstorm-sun</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-thunderstorm"></i>
+                    <span class="label mono">fi-tc-thunderstorm</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-ticket"></i>
+                    <span class="label mono">fi-tc-ticket</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tire-flat"></i>
+                    <span class="label mono">fi-tc-tire-flat</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tire-pressure-warning"></i>
+                    <span class="label mono">fi-tc-tire-pressure-warning</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tire-rugged"></i>
+                    <span class="label mono">fi-tc-tire-rugged</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tire"></i>
+                    <span class="label mono">fi-tc-tire</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tomato"></i>
+                    <span class="label mono">fi-tc-tomato</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tool-crop"></i>
+                    <span class="label mono">fi-tc-tool-crop</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tooth"></i>
+                    <span class="label mono">fi-tc-tooth</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tornado"></i>
+                    <span class="label mono">fi-tc-tornado</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tractor"></i>
+                    <span class="label mono">fi-tc-tractor</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-trailer"></i>
+                    <span class="label mono">fi-tc-trailer</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-train"></i>
+                    <span class="label mono">fi-tc-train</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tram"></i>
+                    <span class="label mono">fi-tc-tram</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-treatment"></i>
+                    <span class="label mono">fi-tc-treatment</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tree"></i>
+                    <span class="label mono">fi-tc-tree</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-triangle"></i>
+                    <span class="label mono">fi-tc-triangle</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-trophy"></i>
+                    <span class="label mono">fi-tc-trophy</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-truck-container"></i>
+                    <span class="label mono">fi-tc-truck-container</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-truck-couch"></i>
+                    <span class="label mono">fi-tc-truck-couch</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-truck-loading"></i>
+                    <span class="label mono">fi-tc-truck-loading</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-truck-monster"></i>
+                    <span class="label mono">fi-tc-truck-monster</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-truck-moving"></i>
+                    <span class="label mono">fi-tc-truck-moving</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-truck-pickup"></i>
+                    <span class="label mono">fi-tc-truck-pickup</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-truck-plow"></i>
+                    <span class="label mono">fi-tc-truck-plow</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-truck-ramp"></i>
+                    <span class="label mono">fi-tc-truck-ramp</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-truck-side"></i>
+                    <span class="label mono">fi-tc-truck-side</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-tty"></i>
+                    <span class="label mono">fi-tc-tty</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-turkey"></i>
+                    <span class="label mono">fi-tc-turkey</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-umbrella"></i>
+                    <span class="label mono">fi-tc-umbrella</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-underline"></i>
+                    <span class="label mono">fi-tc-underline</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-unlock"></i>
+                    <span class="label mono">fi-tc-unlock</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-usb-pendrive"></i>
+                    <span class="label mono">fi-tc-usb-pendrive</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-utensils"></i>
+                    <span class="label mono">fi-tc-utensils</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-vector-alt"></i>
+                    <span class="label mono">fi-tc-vector-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-vector"></i>
+                    <span class="label mono">fi-tc-vector</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-video-camera"></i>
+                    <span class="label mono">fi-tc-video-camera</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-volcano"></i>
+                    <span class="label mono">fi-tc-volcano</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-volleyball"></i>
+                    <span class="label mono">fi-tc-volleyball</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-volume"></i>
+                    <span class="label mono">fi-tc-volume</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-wagon-covered"></i>
+                    <span class="label mono">fi-tc-wagon-covered</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-water-bottle"></i>
+                    <span class="label mono">fi-tc-water-bottle</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-water-lower"></i>
+                    <span class="label mono">fi-tc-water-lower</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-water-rise"></i>
+                    <span class="label mono">fi-tc-water-rise</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-water"></i>
+                    <span class="label mono">fi-tc-water</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-watermelon"></i>
+                    <span class="label mono">fi-tc-watermelon</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-wheat"></i>
+                    <span class="label mono">fi-tc-wheat</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-wheelchair"></i>
+                    <span class="label mono">fi-tc-wheelchair</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-whistle"></i>
+                    <span class="label mono">fi-tc-whistle</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-wind-warning"></i>
+                    <span class="label mono">fi-tc-wind-warning</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-wind"></i>
+                    <span class="label mono">fi-tc-wind</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-windsock"></i>
+                    <span class="label mono">fi-tc-windsock</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-tc-yen"></i>
+                    <span class="label mono">fi-tc-yen</span>
+                </div>
+            </li>
+
+
+    </ul>
+    <div class="credits">
+        <a href="https://www.flaticon.com/uicons/interface-icons">
+            <p>UIcons 2.6.0 - Flaticon<p>
+        </a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,654 @@
+@use "theme"as *;
+@use "../function/functions"as *;
+@use "../function/breakpoints"as *;
+@use "components"as *;
+.tableDiv {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    display: table;
+    border-spacing: 0;
+    border-collapse: collapse;
+    tr {
+        display: table-row;
+        transition: var(--transition1);
+    }
+    th,
+    td {
+        border-collapse: collapse;
+        background-clip: padding-box;
+        text-align: left;
+        padding: 0.25rem 0.75rem;
+        &:has(input, select, textarea, selector selected item) {
+            padding: 0;
+        }
+        &:has(textarea) {
+            min-width: 250px;
+        }
+        &:has(input, textarea) {
+            padding-top: 0;
+            padding-bottom: 0;
+            z-index: 3 !important;
+        }
+        &:has(selector) {
+            z-index: 4 !important;
+            padding: 0;
+            selected {
+                item {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
+            }
+        }
+        input:not([type="checkbox"], [type="radio"]),
+        select,
+        textarea,
+        selector selected item {
+            @extend %inputHover;
+            width: 100%;
+            height: 100%;
+            font-size: $baseline;
+            padding: .65rem 20px;
+            border: none !important;
+            border-radius: 0;
+            background: transparent !important;
+            border-color: transparent !important;
+            @include media-lg {
+                padding: .65rem $s3;
+            }
+            &:focus,
+            &:active {
+                background: transparent !important;
+                box-shadow: none !important;
+            }
+        }
+        p {
+            margin: 0;
+        }
+        selector {
+            width: 100%;
+            height: 100%;
+            selected {
+                width: inherit;
+                height: inherit;
+                background: inherit !important;
+                border-color: transparent !important;
+                border-radius: 0;
+                items {
+                    background: inherit !important;
+                    border-color: transparent !important;
+                    item {}
+                }
+            }
+        }
+        textarea {
+            height: 70px;
+            min-height: 70px;
+            &::placeholder {
+                transform: translateY(50%);
+                transition: var(--transition1);
+            }
+            &:focus {
+                &::placeholder {
+                    opacity: 0;
+                }
+            }
+        }
+        input[type="time"] {
+            font-size: $font-2;
+        }
+    }
+    td {
+        border-bottom: 1px solid #ffffff8a;
+        transition: var(--transition1);
+        word-break: break-all;
+        font-size: $baseline;
+        line-height: 1.2;
+        white-space: nowrap;
+        .xlIcon,
+        .lgIcon {
+            @include tool-tip-top
+        }
+    }
+}
+
+// Width Styles//
+[width="xxs"] {
+    width: 45px;
+    min-width: 45px;
+}
+
+[width="xs"] {
+    width: 75px;
+    min-width: 75px;
+}
+
+[width="sm"] {
+    width: 100px;
+    min-width: 100px;
+}
+
+[width="md"] {
+    width: 150px;
+    min-width: 150px;
+}
+
+[width="lg"] {
+    width: 200px;
+    min-width: 200px;
+}
+
+[width="xl"] {
+    width: 250px;
+    min-width: 250px;
+}
+
+[width="xxl"] {
+    width: 300px;
+    min-width: 300px;
+}
+
+[width="xxxl"] {
+    width: 350px;
+    min-width: 350px;
+}
+
+[align] {}
+
+[align="left"] {
+    text-align: left;
+}
+
+[align="center"] {
+    text-align: center !important;
+    * {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+[align="right"] {
+    text-align: right;
+}
+
+[align="justify"] {
+    text-align: justify;
+}
+
+.textLimit {
+    overflow: hidden;
+}
+
+.name {
+    @include common-text-color;
+    margin: 0;
+    font-weight: 500;
+    text-transform: capitalize;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.price {
+    @include common-text-color;
+    margin: 0;
+    font-size: $font-5;
+    font-weight: 500;
+    white-space: noWrap;
+    pointer-events: none;
+    z-index: 2;
+    &:empty {
+        display: none;
+    }
+    span {
+        font-weight: 400;
+    }
+}
+
+.cost {
+    display: inline-block;
+    span {
+        @include common-text-color;
+        text-align: right;
+        display: block;
+        font-weight: 400;
+        &:nth-child(1) {
+            font-size: $fontMob-1;
+            font-weight: 500;
+        }
+        &:nth-child(2) {
+            margin-top: 0.5rem;
+            font-size: $fontMob-3;
+            font-weight: 400;
+            padding-left: 0.25rem;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 2px;
+                height: 11px;
+                background-color: var(--green);
+                border-radius: var(--radius);
+            }
+        }
+    }
+}
+
+.datePeriod {
+    @include common-text-color;
+    span,
+    p {
+        display: block;
+        font-weight: 400;
+        padding-left: 0.7rem;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 3px;
+            left: -1.5px;
+            width: 5px;
+            height: 5px;
+            z-index: 1;
+            border-radius: var(--radius);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 1px;
+            background-color: var(--borderGray);
+        }
+        &:nth-child(1) {
+            &::after {
+                background-color: #81c376;
+            }
+        }
+        &:nth-child(2) {
+            margin-top: 0.25rem;
+            &::after {
+                background-color: #e57575;
+            }
+        }
+    }
+}
+
+.contactActionList {
+    margin-top: $s2;
+    .contactList {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0.25rem 0;
+        z-index: 2;
+        &:hover {
+            .contactCopy {
+                opacity: 1;
+                transform: scale(1.1);
+                i {
+                    opacity: .5;
+                }
+            }
+        }
+        &:nth-last-child(1) {
+            border-bottom: none;
+        }
+        .phone,
+        .email,
+        .whatsapp {
+            padding: 0.25rem 0;
+        }
+        .contactCopy {
+            opacity: 0;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.35rem;
+            margin-left: 0.5rem;
+            border-radius: var(--inputRadius);
+            background-color: var(--inputColor1);
+            cursor: pointer;
+            transition: var(--transition1);
+            &:hover {
+                i {
+                    opacity: 1;
+                    color: var(--text-color);
+                }
+            }
+            &:focus,
+            &:active {
+                color: var(--standard-bg-color);
+                background-color: var(--text-color);
+            }
+            i {
+                color: var(--text-color);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+%textLinks {
+    @include common-text-color;
+    display: inline-block;
+    font-size: $fontSmall;
+    font-weight: 500;
+    white-space: noWrap;
+    transition: var(--transition1);
+    &:empty {
+        margin: 0 !important;
+        &::before {
+            display: none !important;
+        }
+    }
+    &::before {
+        top: 2px;
+        margin-right: 0.5rem;
+        color: inherit;
+        @include icon;
+        transform: translateY(2px);
+        opacity: .7;
+    }
+}
+
+.userText {
+    @extend %textLinks;
+    font-weight: 600;
+    text-transform: capitalize;
+    pointer-events: none;
+    z-index: 2;
+    &::before {
+        content: "\f468";
+    }
+}
+
+.addressText,
+.locationText {
+    @extend %textLinks;
+    font-size: $fontSmall;
+    text-transform: capitalize;
+    z-index: 2;
+    &::before {
+        content: "\f31f";
+    }
+}
+
+.departmentText {
+    @extend %textLinks;
+    text-transform: capitalize;
+    pointer-events: none;
+    z-index: 2;
+    &::before {
+        content: "\f188";
+    }
+}
+
+.sourceText {
+    @extend %textLinks;
+    font-weight: 400;
+    text-transform: capitalize;
+    pointer-events: none;
+    pointer-events: none;
+    z-index: 2;
+    &::before {
+        content: "\f483";
+    }
+}
+
+.subSourceText {
+    @extend %textLinks;
+    font-size: $fontMob-2;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    pointer-events: none;
+    pointer-events: none;
+    z-index: 2;
+    &::before {
+        display: none;
+        opacity: 0;
+        content: "\f3f8";
+    }
+}
+
+.timeText {
+    @extend %textLinks;
+    pointer-events: none;
+    z-index: 2;
+    &::before {
+        content: "\f201";
+    }
+}
+
+.dateText {
+    @extend %textLinks;
+    font-size: $fontMob-1;
+    pointer-events: none;
+    opacity: .7;
+    pointer-events: none;
+    z-index: 2;
+    &::before {
+        content: "";
+    }
+}
+
+.idText {
+    @extend %textLinks;
+    font-size: $fontMob-1;
+    opacity: .7;
+    pointer-events: none;
+    z-index: 2;
+    &::before {
+        content: "#";
+    }
+}
+
+.phone {
+    @extend %textLinks;
+    font-size: .95rem;
+    letter-spacing: .5px;
+    opacity: .95;
+    &:hover {
+        color: #293db1;
+    }
+    &::before {
+        content: "";
+    }
+}
+
+.whatsapp {
+    @extend %textLinks;
+    font-size: .95rem;
+    letter-spacing: .5px;
+    opacity: .95;
+    &:hover {
+        color: #293db1;
+    }
+    &::before {
+        content: "\f1c4";
+    }
+}
+
+.email {
+    @extend %textLinks;
+    font-size: .95rem;
+    letter-spacing: .5px;
+    opacity: .95;
+    &:hover {
+        color: #293db1;
+    }
+    &::before {
+        content: "";
+    }
+}
+
+.messageText {
+    z-index: 2;
+    &:hover {
+        .label {
+            color: var(--color1);
+        }
+        .message {
+            display: block;
+            z-index: 101;
+        }
+    }
+    .label {
+        @include common-text-color;
+        display: flex;
+        align-items: center;
+        font-size: $fontMob-2;
+        font-weight: 500;
+        text-transform: uppercase;
+        cursor: pointer;
+        i {
+            font-size: $fontMob-2;
+            color: inherit;
+            padding-right: 5px;
+            margin-right: 5px;
+            border-right: 1px solid var(--inputColor3);
+        }
+    }
+    .message {
+        @include common-text-color;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: -1px;
+        width: 300px;
+        font-size: $fontSmall;
+        font-weight: 400;
+        line-height: 1.5 !important;
+        white-space: wrap;
+        background-color: var(--white);
+        border: 1px solid var(--borderGray);
+        border-radius: 0 0 var(--radius) var(--radius);
+        padding: $baseline;
+        @include media-md {
+            width: 500px;
+        }
+    }
+}
+
+.sText {
+    @include common-text-color;
+    display: block;
+    font-size: $fontMob-1;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.bText {
+    @include common-text-color;
+    display: block;
+    font-size: $fontSmall;
+    margin: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+@mixin ribbonLabel {
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: $fontMob-2;
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 3px 0 0 3px;
+    &:empty {
+        padding: 0;
+        &:before {
+            display: none;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -18px;
+        height: 0;
+        display: inline-block;
+        border: 12px solid #e8e9ee;
+        border-right: 10px inset transparent !important;
+    }
+}
+
+[reminder="active"] {
+    border: 1px solid #b6f3b6;
+}
+
+[reminder="done"] {
+    background-color: #ecffef;
+    .btn {
+        display: none;
+    }
+}
+
+[reminder="cancel"] {
+    background-color: var(--lightGray);
+    border: 1px solid var(--borderGray);
+    opacity: 0.5;
+    .btn {
+        display: none;
+    }
+}
+
+[label] {
+    @include ribbonLabel;
+}
+
+[label="red"] {
+    color: var(--white);
+    background-color: #ff5b5b;
+    &::after {
+        border-color: #ff5b5b transparent #ff5b5b #ff5b5b;
+    }
+}
+
+[label="orange"] {
+    color: var(--white);
+    background-color: #ff8146;
+    &::after {
+        border-color: #ff8146 transparent #ff8146 #ff8146;
+    }
+}
+
+[label="yellow"] {
+    color: var(--darkGray);
+    background-color: #fff75b;
+    &::after {
+        border-color: #fff75b transparent #fff75b #fff75b;
+    }
+}
+
+[label="green"] {
+    color: var(--white);
+    background-color: #36bb22;
+    &::after {
+        border-color: #36bb22 transparent #36bb22 #36bb22;
+    }
+}
+
+[label="blue"] {
+    color: var(--white);
+    background-color: #5b69ff;
+    &::after {
+        border-color: #5b69ff transparent #5b69ff #5b69ff;
+    }
+}
+
+[label="gray"] {
+    color: var(--darkGray);
+    background-color: #e8e9ee;
+    &::after {
+        border-color: #e8e9ee transparent #e8e9ee #e8e9ee;
+    }
+}

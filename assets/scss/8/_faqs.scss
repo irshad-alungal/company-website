@@ -1,0 +1,143 @@
+
+/* FAQS
+-----------------------------------------------------------------*/
+
+.faqs{
+
+    .main-marq{
+
+        &:after{
+            display: none;
+        }
+
+        h4{
+            font-size: 250px;
+            font-weight: 700;
+            line-height: 1;
+            text-transform: uppercase;
+
+            span{
+                color: rgba(255,255,255,.02);
+            }
+        }
+
+        .icon{
+            margin-left: 50px;
+            display: flex;
+            align-items: center;
+
+            img{
+                width: 100px;
+            }
+        }
+    }
+
+    .accordion-item{
+        border: 0;
+        margin-bottom: 30px;
+        background: transparent;
+    
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+    
+    .accordion-header{
+    
+        .accordion-button{
+            background: transparent;
+            font-size: 20px;
+            color: inherit;
+            padding: 20px;
+            position: relative;
+            border: 1px solid rgba(255,255,255,.05);
+    
+            .icon{
+                position: absolute;
+                right: 0;
+                top: 0;
+                padding: 20px;
+                border-left: 1px solid rgba(255,255,255,.05);
+    
+                svg{
+                    opacity: .3;
+
+                    path{
+                        stroke: #fff;
+                    }
+                }
+            }
+
+            .face-icon{
+                width: 25px;
+            }
+    
+            &:after{
+                display: none;
+            }
+        
+            &:focus{
+                outline: none !important;
+                box-shadow: none;
+            }
+    
+            &:not(.collapsed){
+                box-shadow: none;
+    
+                .icon{
+    
+                    svg{
+                        transform: rotate(90deg);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    
+    .accordion-body{
+        background: rgba(255,255,255,.02);
+        padding: 30px;
+        box-shadow: none;
+
+        p{
+            font-weight: 300;
+        }
+    }
+
+    .imgs{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        min-width: 1920px;
+        height: 100%;
+        pointer-events: none;
+
+        .img1{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 300px;
+            height: 350px;
+        }
+
+        .img2{
+            position: absolute;
+            bottom: 0;
+            left: 300px;
+            width: 190px;
+            height: 150px;
+        }
+
+        .img3{
+            position: absolute;
+            right: 0;
+            top: 15%;
+            width: 420px;
+            height: 450px;
+        }
+    }
+}

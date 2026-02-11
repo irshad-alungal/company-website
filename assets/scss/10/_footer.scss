@@ -1,0 +1,88 @@
+/* --------------- footer --------------- */
+
+.footer-mp{
+
+    .info-item{
+
+        h6{
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    }
+
+    .footer-logo{
+        position: relative;
+        margin-top: 100px;
+
+        h1{
+            font-size: 290px;
+            line-height: 1.2;
+
+            span{
+                font-family: "Playfair Display", serif;
+                font-style: italic;
+            }
+        }
+
+        .union{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 180px;
+            background: #fff;
+            padding: 10px;
+            border-radius: 50%;
+
+            .icon{
+                width: 64px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+            }
+        }
+    }
+
+    .social-icon{
+        padding-top: 30px;
+
+        a{
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,.2);
+            border-radius: 50%;
+            font-size: 14px;
+            margin: 0 5px;
+
+            &:hover{
+                background: $main-color;
+                border-color: $main-color;
+                transition: all .4s;
+            }
+        }
+    }
+
+    .sub-footer{
+
+        .copy{
+
+            p{
+                font-size: 14px;
+            }
+        }
+
+        .links{
+            width: 100%;
+
+            a{
+                font-size: 14px;
+            }
+
+            .active{
+                color:$main-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+/* --------------- Clients --------------- */
+
+.brands-mp{
+
+    .item{
+        position: relative;
+        display: inline-block;
+        padding: 0 60px;
+        margin-top: 60px;
+
+        &:after{
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: $main-color;
+            border-radius: 2px;
+            position: absolute;
+            top: 50%;
+            right: -5px;
+            transform: rotate(30deg)
+        }
+
+        &.nodot{
+
+            &:after{
+                display: none;
+            }
+        }
+
+        &:hover{
+
+            .icon{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        h2{
+            font-family: "Playfair Display", serif;
+            font-style: italic;
+            font-size: 64px;
+            line-height: 64px;
+        }
+
+        .icon{
+            width: 200px;
+            position: absolute;
+            top: -60px;
+            right: -40px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .4s;
+        }
+    }
+}

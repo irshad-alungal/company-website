@@ -1,0 +1,420 @@
+@use "../theme/theme"as *;
+
+$bg-color: var(--bg-color);
+$sub-color: var(--sub-color);
+$theme-color: var(--theme-color);
+$main-color: var(--main-color);
+$heading-color: var(--heading-color);
+$p-color: var(--p-color);
+$border-color: var(--border-color);
+$mobile-xs-screen: 480px;
+$tablet-sm-screen: 768px;
+$desk-md-screen: 992px;
+$desk-lg-screen: 1300px;
+
+
+
+// menu
+@import 'menu';
+
+// header
+@import 'header';
+
+// About
+@import 'about';
+
+// Services
+@import 'services';
+
+// Works
+@import 'works';
+
+// Clients
+@import 'clients';
+
+// testimonials
+@import 'testimonials';
+
+// Process
+@import 'process';
+
+// FAQS
+@import 'faq';
+
+// Team
+@import 'team';
+
+// Blogs
+@import 'blogs';
+
+// footer
+@import 'footer';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #000;
+    background-color: $theme-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    margin: 0;
+}
+
+h1 {
+    font-size: 64px;
+    line-height: 64px;
+    letter-spacing: -3px;
+}
+
+h2 {
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: -2px;
+}
+
+h3 {
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: -2px;
+}
+
+h4 {
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -1px;
+}
+
+h5 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -1px;
+}
+
+h6 {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.sub-head {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.sub-color {
+    color: #808080;
+}
+
+p {
+    color: #494949;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.sec-head {
+
+    h2 {
+        font-size: 65px;
+        line-height: 65px;
+
+        span {
+            font-family: "Playfair Display", serif;
+            font-style: italic;
+            font-weight: 400;
+        }
+    }
+}
+
+.bg-gray {
+    background: $bg-color;
+}
+
+.loader-wrap svg {
+    fill: #1d1d1d;
+}
+
+.butn {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+
+    &.butn-bord {
+        border: 1px solid rgba(0, 0, 0, .2);
+
+        &:hover {
+            background: #494949;
+            color: #fff;
+        }
+    }
+
+    &.butn-bg {
+        background: $main-color;
+        border: 1px solid transparent;
+        color: #fff;
+
+        &:hover {
+            background: transparent;
+            border-color: $main-color;
+            color: inherit;
+        }
+    }
+}
+
+.icon.invert {
+
+    img {
+        filter: invert(1);
+    }
+}
+
+.butn {
+
+    .icon {
+        width: 18px;
+    }
+
+    &:hover {
+
+        .icon.invert {
+
+            img {
+                filter: invert(0);
+            }
+        }
+    }
+}
+
+.box-light {
+    background-color: #fff;
+    color: #000;
+    position: relative;
+    border-radius: 0 0 30px 30px;
+    z-index: 4;
+
+    .layers {
+        position: absolute;
+        top: 5px;
+        left: 30px;
+        right: 30px;
+        bottom: -10px;
+        background: #fff;
+        border-radius: 15px;
+        opacity: .7;
+        z-index: -1;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 20px;
+            right: 20px;
+            bottom: -10px;
+            background: #fff;
+            border-radius: 15px;
+            opacity: .7;
+            z-index: -1;
+        }
+    }
+
+    &.botm-box {
+        border-radius: 30px 30px 0 0;
+        margin-top: -50px;
+
+        .layers {
+            top: -10px;
+            bottom: 5;
+
+            &:after {
+                top: -10px;
+                bottom: 5px;
+            }
+        }
+    }
+}
+
+.box-dark {
+    background: #151515;
+    color: #fff;
+    position: relative;
+    z-index: -1;
+    margin-top: -50px;
+    padding: 50px 0;
+
+    p {
+        color: #d1d1d1;
+    }
+}
+
+/* ====================== [ Start Responsive ] ====================== */
+
+@media screen and (max-width: $desk-md-screen) {
+
+    .ml-none {
+        margin-left: 0 !important;
+    }
+
+    .sec-head {
+
+        .ml-auto {
+            margin: 30px 0 0 0 !important;
+        }
+    }
+
+    .header-mp .caption h1 {
+        font-size: 200px;
+    }
+
+    .services-mp .content .item {
+        padding: 0 15px;
+    }
+
+    .process-mp .item {
+
+        .d-flex {
+            display: block !important;
+        }
+
+        .text {
+            padding-left: 0;
+        }
+
+        .botm {
+            display: flex !important;
+
+            h3 {
+                font-size: 30px;
+                line-height: 1.2;
+            }
+
+            span {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .team-mp .item {
+
+        .img {
+            width: 280px;
+        }
+
+        h2 {
+            font-size: 30px;
+            line-height: 1.2;
+        }
+    }
+
+    .testimonials-mp .swiper-slide {
+        width: 500px;
+    }
+
+    .footer-mp .footer-logo h1 {
+        font-size: 200px;
+    }
+}
+
+@media screen and (max-width: $tablet-sm-screen) {
+
+    .navbar {
+
+        .container {
+            padding: 5px 10px;
+        }
+    }
+
+    .header-mp .caption h1,
+    .footer-mp .footer-logo h1 {
+        font-size: 100px;
+    }
+
+    .sec-head h2 {
+        font-size: 45px;
+        line-height: 1.2;
+    }
+
+    .services-mp .serv-title .tab-title h2 {
+        font-size: 65px;
+        line-height: 1.2;
+    }
+
+    .team-mp .item {
+        padding: 30px;
+
+        .d-flex {
+            display: block !important;
+        }
+
+        .img {
+            width: auto;
+            height: auto;
+            background: $theme-color;
+        }
+
+        .cont {
+            padding: 30px 0 0;
+            text-align: center;
+        }
+
+        .ml-auto {
+            width: max-content;
+            margin: auto !important;
+        }
+
+        .social-icon {
+            padding: 0;
+            margin-top: 30px;
+        }
+    }
+
+    .testimonials-mp .swiper-slide {
+        width: 100%;
+        padding: 0 10px;
+        margin: 0;
+
+        .item {
+            transform: none !important;
+        }
+    }
+
+    .testimonials-mp .testim-swiper {
+        padding: 0;
+    }
+
+    .brands-mp .item {
+
+        &:after {
+            display: none;
+        }
+
+        h2 {
+            font-size: 40px;
+            line-height: 1.2;
+        }
+    }
+
+    .footer-mp .footer-logo .union {
+        display: none;
+    }
+}

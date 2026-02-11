@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&family=Six+Caps&display=swap');
+/*Font Ratios/
+1.067 – Minor Second
+1.125 – Major Second
+1.200 – Minor Third
+1.250 – Major Third
+1.333 – Perfect Fourth
+1.414 – Augmented Fourth
+1.500 – Perfect Fifth
+*/
+
+//Font & Spacing//
+$baseline: 1rem; // Base font
+$baseFontMob: 16px; // Base font for mobile
+$baseFontPC: 20px; // Base font for desktop
+$ratio-mobile: 1.200; // Define font ratio for mobile
+$ratio-pc: 1.333; // Define font ratio for desktop
+$adjustment-mobile:1; // Adjust the font scale for mobile
+$adjustment-pc: 1; // Adjust the font scale for desktop
+
+:root {
+
+    --bg-color: #18191b;
+    --theme-color: #0e0f11;
+    --main-color: #ffd737;
+
+    --font-family: "Plus Jakarta Sans", sans-serif !important;
+    --font-family1: "Six Caps", sans-serif !important;
+    /*Primary Colors*/
+    --color1: #ffd737;
+    --color2: #be9d33;
+    --color3: #5790e1;
+    --color4: #d6559e;
+    --color5: #d14f50;
+    --color6: #28cf8c;
+
+    /*Secondary Colors*/
+    --highlight: #172747;
+    --white: #ffffff;
+    --lightGray: #f2f4f7;
+    --borderGray: #e5e7eb;
+    --visibleGray: #e2e2e2;
+    --textGray: #898989;
+    --gray: #454545;
+    --darkGray: #23262F;
+    --black: #19191a;
+    --red: #ec4c4c;
+    --green: #3cc274;
+    --blue: #546bd4;
+    --yellow: #f5a905;
+    --inputColor: light-dark(#de1c24, #f5c7c7);
+    --inputColor1: color-mix(in srgb, var(--inputColor), var(--bg-color) 97%);
+    --inputColor2: color-mix(in srgb, var(--inputColor), var(--bg-color) 90%);
+    --inputColor3: color-mix(in srgb, var(--inputColor), var(--bg-color) 70%);
+    --inputColor4: color-mix(in srgb, var(--inputColor), var(--bg-color) 50%);
+    --inputColor5: color-mix(in srgb, var(--inputColor), var(--bg-color) 30%);
+    --input-size: 1rem;
+    /*Gradients*/
+    --gradient1: linear-gradient(90deg, rgb(241, 76, 79) 0%, rgb(207, 18, 49) 100%);
+    --gradient2: linear-gradient(to right top, #111118, #13151a, #15181c, #181b1e, #1b1e20, #1c1f21, #1d1f22, #1e2023, #1d1f23, #1c1e22, #1b1c22, #1b1b21);
+    --gradient3: linear-gradient(to right top, #eff3ff, #edf2ff, #ecf0ff, #eaefff, #e8eeff, #e6ecff, #e3ebff, #e1e9ff, #dee7ff, #dbe4ff, #d8e2ff, #d5dfff);
+    /*Radius*/
+    --radius: 40px;
+    --inputRadius: 40px;
+    --btnRadius: 40px;
+    /*Transitions*/
+    --transition1: all .3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    --transition2: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+    --transition3: 0.7s cubic-bezier(0.37, 0, 0.63, 1);
+    /*Box Shadow*/
+    --shadow-1: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    --shadow-2: rgba(0, 0, 0, 0.075) 0px 3px 6px, rgba(0, 0, 0, 0.116) 0px 3px 6px;
+    --shadow-3: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    /*Theme*/
+    --text-color: light-dark(#070707, #e0e0e0);
+    --bg-color: light-dark(#ffffff, #121212);
+    --shade-1: color-mix(in srgb, var(--bg-color), #fdfdfd 80%);
+    --shade-2: color-mix(in srgb, var(--bg-color), #ecf0ef 70%);
+    --shade-3: color-mix(in srgb, var(--bg-color), #d9dfde 50%);
+    --shade-4: color-mix(in srgb, var(--bg-color), #b0b6b1 40%);
+    --shade-5: color-mix(in srgb, var(--bg-color), #8a8e8b 20%);
+    //Main//
+    --section-space-x: clamp(1.5rem, 4vw, 3rem); // Define section spacing on lef/right (min,preferred,max)
+    --section-space-y: clamp(1.5rem, 4vw, 4rem); // Define section spacing on top/bottom (min,preferred,max)
+    --section-max-width: 100%; // Define Maximum Content Section Width
+    --container-max-width: 2000px; // Define Maximum Main Container Width
+}

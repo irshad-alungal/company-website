@@ -1,0 +1,74 @@
+
+/* Pricing
+-----------------------------------------------------------------*/
+
+.price{
+
+    .item{
+        padding: 40px;
+        border: 1px solid rgba(0,0,0,.1);
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+
+        &:after,
+        &:before{
+            content: '';
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 150px;
+            height: 150px;
+            border: 1px solid rgba(0,0,0,.1);
+            border-radius: 50%;
+        }
+
+        &:before{
+            transform: scale(1.5);
+        }
+
+        &.gray{
+            background: #ddd;
+        }
+
+        &.dark{
+            background: #0D0F11;
+            color: #fff;
+
+            &:after,
+            &:before{
+                border-color: rgba(255,255,255,.1);
+            }
+        }
+
+        .feat{
+
+            li{
+                margin-bottom: 10px;
+
+                .icon{
+                    font-size: 12px;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .view{
+
+            svg{
+                transform: rotate(45deg);
+            }
+        }
+
+        .amount{
+
+            h2{
+                line-height: 1;
+
+                span{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

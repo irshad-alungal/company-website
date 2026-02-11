@@ -1,0 +1,85 @@
+/* --------------- Services --------------- */
+
+.services-dm{
+    position: relative;
+    z-index: 3;
+
+    .img-patern{
+        position: absolute;
+        bottom: 10%;
+        left: -15%;
+        width: 30%;
+        filter: invert(1);
+        opacity: .07;
+        z-index: -1;
+    }
+
+    .item{
+        padding: 20px 0;
+        border-top: 1px solid rgba(255,255,255,.1);
+        overflow: hidden;
+        transition: all .4s;
+
+        &:last-of-type{
+            border-bottom: 1px solid rgba(255,255,255,.1);
+        }
+
+        .title{
+
+            h2{
+                font-size: 100px;
+                letter-spacing: -4px;
+            }
+        }
+
+        p{
+            opacity: 0;
+            transition: all .4s;
+        }
+
+        .icon{
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 50%;
+            margin-left: 150px;
+
+            img{
+                width: 30px;
+            }
+        }
+        
+        &:hover{
+
+            .title{
+                margin-bottom: 0;
+                color: $main-color;
+            }
+
+            p{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.numbers-dm{
+
+    .item{
+
+        h2{
+            font-size: 120px;
+            font-weight: 200;
+
+            span{
+                font-size: 50px;
+            }
+        }
+
+        h6{
+            font-size: 18px;
+        }
+    }
+}

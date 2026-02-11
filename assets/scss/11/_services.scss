@@ -1,0 +1,70 @@
+/* --------------- Services --------------- */
+
+.services-accord2{
+    color: #fff;
+    background: $main-color;
+    border-radius: 50px 50px 0 0;
+    padding-bottom: 200px;
+    position: relative;
+    z-index: 5;
+
+    .accordion{
+
+        .accordion-item{
+            background: transparent;
+            border-radius: 0;
+            border: 0;
+        }
+
+        .accordion-title{
+            padding: 30px 0;
+            border-bottom: 1px solid rgba(255,255,255,.1);
+            cursor: pointer;
+            overflow: hidden;
+
+            h2{
+                font-size: 90px;
+                font-weight: 500;
+                margin-bottom: -60px;
+            }
+
+            .icon{
+
+                svg{
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+
+            &:not(.collapsed){
+
+                .title{
+
+                    h2{
+                        margin-bottom: 0;
+                    }
+                }
+
+                .icon{
+
+                    svg{
+                        
+                        path{
+                            stroke: #0047FF;
+                        }
+                    }
+                }
+            }
+        }
+
+        .accordion-body{
+            padding: 40px 0;
+            border-bottom: 1px solid rgba(255,255,255,.1);
+
+            .img{
+                height: 140px;
+                border-radius: 15px;
+            }
+        }
+    }
+}

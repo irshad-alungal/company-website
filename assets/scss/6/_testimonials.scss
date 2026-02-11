@@ -1,0 +1,68 @@
+/* --------------- Testimonials --------------- */
+
+.testimonials-dm{
+    overflow: hidden !important;
+
+    .sec-head{
+
+        .states{
+
+            h6{
+                font-size: 16px;
+
+                i{
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    font-size: 13px;
+                    border-radius: 50%;
+                    background: #1a1b1e;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    .swiper{
+        clip-path: inset(-100vw -100vw -100vw 0);
+        overflow: visible;
+    }
+
+    .swiper-wrapper{
+        padding-bottom: 140px;
+    }
+
+    .item{
+        padding: 40px 30px;
+        border-radius: 15px;
+        background: $bg-color;
+
+        .fit-img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        span.sub-color{
+            font-size: 16px;
+        }
+
+        .stars{
+            color: $main-color;
+            font-size: 13px;
+        }
+    }
+
+    .swiper-pagination{
+        position: absolute;
+        bottom: 0;
+        top: auto;
+        background: rgba(255,255,255,.08);
+        height: 2px;
+    }
+
+    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+        background: #fff;
+    }
+}

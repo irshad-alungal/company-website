@@ -1,0 +1,68 @@
+/* --------------- Awards --------------- */
+
+.intro-vid{
+
+    .bg-img{
+        height: 580px;
+        border-radius: 30px;
+        margin-top: -140px;
+        position: relative;
+
+        .states{
+            position: absolute;
+            top: -120px;
+            left: 30px;
+            background: $theme-color;
+            padding: 60px 40px;
+            border-radius: 30%;
+            max-width: 300px;
+            z-index: 3;
+
+            .imgs{
+                display: flex;
+
+                .img{
+                    width: 47px;
+                    height: 47px;
+                    border-radius: 50%;
+                    border: 2px solid $bg-color;
+                }
+
+                .icon{
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    background: $main-color;
+                    text-align: center;
+                    line-height: 40px;
+                    margin-left: -10px;
+                    z-index: -1;
+                    transition: all .5s;
+            
+                    img{
+                        width: 15px;
+                        transition: all .5s;
+                    }
+                }
+            }
+        }
+
+        .play-button{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+
+            a{
+                width: 120px;
+                height: 120px;
+                line-height: 120px;
+                font-size: 40px;
+                text-align: center;
+                border-radius: 50%;
+                border: 1px solid rgba(255,255,255,.7);
+                background: rgba(255,255,255,.1);
+            }
+        }
+    }
+}
